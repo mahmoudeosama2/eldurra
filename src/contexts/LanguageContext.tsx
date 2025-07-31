@@ -1,5 +1,3 @@
-// ✅ LanguageProvider.tsx (بعد التعديل الكامل)
-
 import React, { createContext, useContext, useState, ReactNode } from 'react';
 
 type Language = 'ar' | 'en';
@@ -39,51 +37,79 @@ export const translations = {
     // Properties
     'properties.title': 'Project Components',
 
-    // Mahboula Residential Complex
-    'properties.jabriya.title': 'Mahboula Residential Complex',
-    'properties.jabriya.description': '16 residential buildings located in Mahboula – Block 3.',
+    // Property Categories
+    'properties.categories.current': 'Current Main Projects',
+    'properties.categories.complexes': 'Commercial Complexes',
+    'properties.categories.residential': 'Residential Properties',
+    'properties.categories.previous': 'Previously Managed Properties',
+    'properties.categories.construction': 'Construction & Renovation Projects',
 
-    // Hotel Project
+    // Current Projects
+    'properties.jabriya.title': 'JABRIYA Hotel',
+    'properties.jabriya.description': 'Premium hotel facility located in Jabriya area.',
+
     'properties.hotel.title': 'Hotel Project (Under Construction)',
     'properties.hotel.description': 'A hotel project under development. Location: Jabriya. Expected to include hospitality services and strategic positioning with modern amenities.',
 
-    // Commercial Complex
     'properties.mall.title': 'Commercial Complex',
     'properties.mall.description': 'A multi-purpose complex under the management of Durra World Company.',
 
-    // Real Estate Portfolio
     'properties.portfolio.title': 'Real Estate Portfolio',
     'properties.portfolio.description': 'Various projects managed or leased across Kuwait.',
 
-    // Residential Villa Projects
-    'properties.residential.title': 'Residential Villa Project',
-    'properties.residential.description': 'Part of residential villa development projects currently being developed and managed.',
-
-    'properties.luxury.title': 'Residential Villa Project',
-    'properties.luxury.description': 'Part of residential villa development projects currently being developed and managed.',
-
-    'properties.building1.title': 'Residential Villa Project',
-    'properties.building1.description': 'Part of residential villa development projects currently being developed and managed.',
-
-    'properties.building2.title': 'Residential Villa Project',
-    'properties.building2.description': 'Part of residential villa development projects currently being developed and managed.',
-
-    'properties.building3.title': 'Residential Villa Project',
-    'properties.building3.description': 'Part of residential villa development projects currently being developed and managed.',
-
-    'properties.daralawad.title': 'Residential Villa Project',
-    'properties.daralawad.description': 'Part of residential villa development projects currently being developed and managed.',
-
-    // Blue Tower Complex
     'properties.btbuilding.title': 'Main Office',
     'properties.btbuilding.description': 'Main office location at Mazaya Towers, Kuwait.',
+
+    // Alrayaan Complex
+    'properties.alrayaan.title': 'السالمية الريان 5',
+    'properties.alrayaan.description': 'مجمع الريان في السالمية.',
+    'properties.alrayaan2.title': 'السالمية الريان 7',
+    'properties.alrayaan2.description': 'مجمع الريان في السالمية.',
+    'properties.alrayaan3.title': 'السالمية الريان 8',
+    'properties.alrayaan3.description': 'مجمع الريان في السالمية.',
+
+    // La Plage Complex
+    'properties.lablag.title': 'البلاج 2',
+    'properties.lablag.description': 'مجمع البلاج على شارع الخليج العربي.',
+    'properties.lablag2.title': 'البلاج',
+    'properties.lablag2.description': 'مجمع البلاج على شارع الخليج العربي.',
+
+    // Mahbullah Properties
+    'properties.mahbullah216.title': 'المهبولة 216',
+    'properties.mahbullah216.description': 'عقار المهبولة 216.',
+    'properties.mahbullah216_2.title': 'المهبولة 216',
+    'properties.mahbullah216_2.description': 'عقار المهبولة 216.',
+    'properties.mahbullahComplex.title': 'عقارات المهبولة 3',
+    'properties.mahbullahComplex.description': 'عقارات المهبولة.',
+    'properties.mahbullahComplex2.title': 'عقارات المهبولة 4',
+    'properties.mahbullahComplex2.description': 'عقارات المهبولة.',
+
+    // Residential Villas
+    'properties.residential.title': 'Residential Villa Project',
+    'properties.residential.description': 'Part of residential villa development projects currently being developed and managed.',
+    'properties.luxury.title': 'Luxury Villa Project',
+    'properties.luxury.description': 'Premium villa development with luxury amenities and modern design.',
+    'properties.daralawad.title': 'Dar Al Awadh Villa',
+    'properties.daralawad.description': 'Premium villa development in prime residential area.',
+
+    // Villa Properties
+    'properties.villa1.title': 'ديوان الرميثية قطعة 3',
+    'properties.villa1.description': 'ديوان الرميثية قطعة 3.',
+    'properties.villa2.title': 'سلوى قطعة 7',
+    'properties.villa2.description': 'سلوى قطعة 7.',
+    'properties.villa3.title': 'فيلا الرميثية قطعة 7',
+    'properties.villa3.description': 'فيلا الرميثية قطعة 7.',
+    'properties.villa4.title': 'فيلا الرميثية قطعة 9',
+    'properties.villa4.description': 'فيلا الرميثية قطعة 9.',
+    'properties.villa5.title': 'فيلا الرميثية قطعة 12',
+    'properties.villa5.description': 'فيلا الرميثية قطعة 12.',
 
     // Previous Projects
     'properties.salmiya.title': 'Previous Projects',
     'properties.salmiya.description': 'Projects previously managed including La Plage, Al Hamra Complex, Al Rayan, and Salam Mall management period. Management handled personally by Hamed Awadh before Durra World Company establishment.',
 
     'properties.lolohyber.title': 'Salam Mall Management Period',
-    'properties.lolohyber.description': 'Commercial entities including Lulu Hypermarket and Al Tijari Bank managed during Salam Mall administration period. Handled personally by Hamed Awadh before Durra World Company establishment.',
+    'properties.lolohyber.description': 'Commercial entities including Lulu Hypermarket and Al Tijari Bank managed during Salam Mall administration period.',
 
     'properties.lolohyber2.title': 'Commercial Entities Management',
     'properties.lolohyber2.description': 'Various commercial entities managed during previous projects period.',
@@ -93,6 +119,36 @@ export const translations = {
 
     'properties.altijari.title': 'Al Tijari Bank Cooperation',
     'properties.altijari.description': 'Cooperation with Al Tijari Bank during previous project management periods.',
+
+    // Al Hamra Residence
+    'properties.hamra.title': 'الحمرا ريزيدنس',
+    'properties.hamra.description': 'الحمرا ريزيدنس.',
+    'properties.hamra2.title': 'الحمرا ريزيدنس',
+    'properties.hamra2.description': 'الحمرا ريزيدنس.',
+    'properties.hamra3.title': 'الحمرا ريزيدنس',
+    'properties.hamra3.description': 'الحمرا ريزيدنس.',
+
+    // Salam Mall
+    'properties.salam1.title': 'السلام مول 2',
+    'properties.salam1.description': 'السلام مول.',
+    'properties.salam2.title': 'السلام مول 4',
+    'properties.salam2.description': 'السلام مول.',
+    'properties.salam3.title': 'السلام مول 6',
+    'properties.salam3.description': 'السلام مول.',
+    'properties.salam4.title': 'السلام مول 7',
+    'properties.salam4.description': 'السلام مول.',
+    'properties.salam5.title': 'السلام مول 8',
+    'properties.salam5.description': 'السلام مول.',
+
+    // Construction Projects
+    'properties.cartblanche.title': 'حولي كارت بلانش',
+    'properties.cartblanche.description': 'حولي كارت بلانش.',
+    'properties.cartblanche2.title': 'حولي كارت بلانش3',
+    'properties.cartblanche2.description': 'حولي كارت بلانش.',
+    'properties.clinic.title': 'عيادات طبية الشعب البحري',
+    'properties.clinic.description': 'عيادات طبية الشعب البحري.',
+    'properties.clinic2.title': 'عيادات طبية الشعب البحري',
+    'properties.clinic2.description': 'عيادات طبية الشعب البحري.',
 
     // About
     'about.title': 'About DURRA WORLD CO',
@@ -148,8 +204,16 @@ export const translations = {
 
     'properties.title': 'مكونات المشروع',
 
-    'properties.jabriya.title': 'مجمع سكني في المهبولة',
-    'properties.jabriya.description': 'يتكون من 16 عمارة سكنية تقع في قطعة 3 بالمهبولة.',
+    // تصنيفات العقارات
+    'properties.categories.current': 'المشاريع الرئيسية الحالية',
+    'properties.categories.complexes': 'المجمعات التجارية',
+    'properties.categories.residential': 'العقارات السكنية',
+    'properties.categories.previous': 'العقارات المُدارة سابقاً',
+    'properties.categories.construction': 'مشاريع البناء والترميم',
+
+    // المشاريع الحالية
+    'properties.jabriya.title': 'فندق الجابرية',
+    'properties.jabriya.description': 'منشأة فندقية متميزة تقع في منطقة الجابرية.',
 
     'properties.hotel.title': 'مشروع فندقي (قيد الإنشاء)',
     'properties.hotel.description': 'مشروع فندقي قيد التطوير، الموقع: الجابرية. من المتوقع أن يضم خدمات ضيافة وموقع استراتيجي مع مرافق حديثة.',
@@ -160,32 +224,59 @@ export const translations = {
     'properties.portfolio.title': 'المحفظة العقارية',
     'properties.portfolio.description': 'مشاريع متعددة تُدار أو يتم تأجيرها في مختلف أنحاء الكويت.',
 
-    'properties.residential.title': 'مشروع فيلل سكنية',
-    'properties.residential.description': 'جزء من مشاريع فيلل سكنية يتم تطويرها وإدارتها حالياً.',
-
-    'properties.luxury.title': 'مشروع فيلل سكنية',
-    'properties.luxury.description': 'جزء من مشاريع فيلل سكنية يتم تطويرها وإدارتها حالياً.',
-
-    'properties.building1.title': 'مشروع فيلل سكنية',
-    'properties.building1.description': 'جزء من مشاريع فيلل سكنية يتم تطويرها وإدارتها حالياً.',
-
-    'properties.building2.title': 'مشروع فيلل سكنية',
-    'properties.building2.description': 'جزء من مشاريع فيلل سكنية يتم تطويرها وإدارتها حالياً.',
-
-    'properties.building3.title': 'مشروع فيلل سكنية',
-    'properties.building3.description': 'جزء من مشاريع فيلل سكنية يتم تطويرها وإدارتها حالياً.',
-
-    'properties.daralawad.title': 'مشروع فيلل سكنية',
-    'properties.daralawad.description': 'جزء من مشاريع فيلل سكنية يتم تطويرها وإدارتها حالياً.',
-
     'properties.btbuilding.title': 'المكتب الرئيسي',
     'properties.btbuilding.description': 'موقع المكتب الرئيسي في أبراج مزايا، الكويت.',
 
+    // مجمع الريان
+    'properties.alrayaan.title': 'السالمية الريان 5',
+    'properties.alrayaan.description': 'مجمع الريان في السالمية.',
+    'properties.alrayaan2.title': 'السالمية الريان 7',
+    'properties.alrayaan2.description': 'مجمع الريان في السالمية.',
+    'properties.alrayaan3.title': 'السالمية الريان 8',
+    'properties.alrayaan3.description': 'مجمع الريان في السالمية.',
+
+    // مجمع البلاج
+    'properties.lablag.title': 'البلاج 2',
+    'properties.lablag.description': 'مجمع البلاج على شارع الخليج العربي.',
+    'properties.lablag2.title': 'البلاج',
+    'properties.lablag2.description': 'مجمع البلاج على شارع الخليج العربي.',
+
+    // عقارات المهبولة
+    'properties.mahbullah216.title': 'المهبولة 216',
+    'properties.mahbullah216.description': 'عقار المهبولة 216.',
+    'properties.mahbullah216_2.title': 'المهبولة 216',
+    'properties.mahbullah216_2.description': 'عقار المهبولة 216.',
+    'properties.mahbullahComplex.title': 'عقارات المهبولة 3',
+    'properties.mahbullahComplex.description': 'عقارات المهبولة.',
+    'properties.mahbullahComplex2.title': 'عقارات المهبولة 4',
+    'properties.mahbullahComplex2.description': 'عقارات المهبولة.',
+
+    // الفيلل السكنية
+    'properties.residential.title': 'مشروع فيلل سكنية',
+    'properties.residential.description': 'جزء من مشاريع فيلل سكنية يتم تطويرها وإدارتها حالياً.',
+    'properties.luxury.title': 'مشروع فيلل فاخرة',
+    'properties.luxury.description': 'تطوير فيلل متميزة بمرافق فاخرة وتصميم حديث.',
+    'properties.daralawad.title': 'فيلا دار الأعواد',
+    'properties.daralawad.description': 'تطوير فيلل متميزة في منطقة سكنية راقية.',
+
+    // الفيلل
+    'properties.villa1.title': 'ديوان الرميثية قطعة 3',
+    'properties.villa1.description': 'ديوان الرميثية قطعة 3.',
+    'properties.villa2.title': 'سلوى قطعة 7',
+    'properties.villa2.description': 'سلوى قطعة 7.',
+    'properties.villa3.title': 'فيلا الرميثية قطعة 7',
+    'properties.villa3.description': 'فيلا الرميثية قطعة 7.',
+    'properties.villa4.title': 'فيلا الرميثية قطعة 9',
+    'properties.villa4.description': 'فيلا الرميثية قطعة 9.',
+    'properties.villa5.title': 'فيلا الرميثية قطعة 12',
+    'properties.villa5.description': 'فيلا الرميثية قطعة 12.',
+
+    // المشاريع السابقة
     'properties.salmiya.title': 'مشاريع سابقة',
     'properties.salmiya.description': 'مشاريع تمت إدارتها سابقاً تشمل لا بلاج، مجمع الحمراء، الريان، وفترة إدارة السلام مول. تم التعامل من قبل حامد عوض شخصياً قبل تأسيس شركة درة العالم.',
 
     'properties.lolohyber.title': 'فترة إدارة السلام مول',
-    'properties.lolohyber.description': 'كيانات تجارية تشمل لولو هايبر والبنك التجاري تم إدارتها خلال فترة إدارة السلام مول. من قبل حامد عوض شخصياً قبل تأسيس شركة درة العالم.',
+    'properties.lolohyber.description': 'كيانات تجارية تشمل لولو هايبر والبنك التجاري تم إدارتها خلال فترة إدارة السلام مول.',
 
     'properties.lolohyber2.title': 'إدارة الكيانات التجارية',
     'properties.lolohyber2.description': 'كيانات تجارية متعددة تم إدارتها خلال فترة المشاريع السابقة.',
@@ -195,6 +286,36 @@ export const translations = {
 
     'properties.altijari.title': 'التعاون مع البنك التجاري',
     'properties.altijari.description': 'التعاون مع البنك التجاري خلال فترات إدارة المشاريع السابقة.',
+
+    // الحمراء ريزيدنس
+    'properties.hamra.title': 'الحمرا ريزيدنس',
+    'properties.hamra.description': 'الحمرا ريزيدنس.',
+    'properties.hamra2.title': 'الحمرا ريزيدنس',
+    'properties.hamra2.description': 'الحمرا ريزيدنس.',
+    'properties.hamra3.title': 'الحمرا ريزيدنس',
+    'properties.hamra3.description': 'الحمرا ريزيدنس.',
+
+    // السلام مول
+    'properties.salam1.title': 'السلام مول 2',
+    'properties.salam1.description': 'السلام مول.',
+    'properties.salam2.title': 'السلام مول 4',
+    'properties.salam2.description': 'السلام مول.',
+    'properties.salam3.title': 'السلام مول 6',
+    'properties.salam3.description': 'السلام مول.',
+    'properties.salam4.title': 'السلام مول 7',
+    'properties.salam4.description': 'السلام مول.',
+    'properties.salam5.title': 'السلام مول 8',
+    'properties.salam5.description': 'السلام مول.',
+
+    // مشاريع البناء
+    'properties.cartblanche.title': 'حولي كارت بلانش',
+    'properties.cartblanche.description': 'حولي كارت بلانش.',
+    'properties.cartblanche2.title': 'حولي كارت بلانش3',
+    'properties.cartblanche2.description': 'حولي كارت بلانش.',
+    'properties.clinic.title': 'عيادات طبية الشعب البحري',
+    'properties.clinic.description': 'عيادات طبية الشعب البحري.',
+    'properties.clinic2.title': 'عيادات طبية الشعب البحري',
+    'properties.clinic2.description': 'عيادات طبية الشعب البحري.',
 
     'about.title': 'عن شركة درة العالم',
     'about.description': 'شركة عقارية متخصصة في إدارة وتأجير العقارات السكنية والتجارية في الكويت.',
