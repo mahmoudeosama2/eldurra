@@ -59,31 +59,43 @@ export const translations = {
 
     'properties.btbuilding.title': 'Main Office',
     'properties.btbuilding.description': 'Main office location at Mazaya Towers, Kuwait.',
+// Villa Properties
+'properties.villa1.title': 'Al-Rumaithiya Diwan Block 3',
+'properties.villa1.description': 'Al-Rumaithiya Diwan Block 3.',
+'properties.villa2.title': 'Salwa Block 7',
+'properties.villa2.description': 'Salwa Block 7.',
+'properties.villa3.title': 'Al-Rumaithiya Villa Block 7',
+'properties.villa3.description': 'Al-Rumaithiya Villa Block 7.',
+'properties.villa4.title': 'Al-Rumaithiya Villa Block 9',
+'properties.villa4.description': 'Al-Rumaithiya Villa Block 9.',
+'properties.villa5.title': 'Al-Rumaithiya Villa Block 12',
+'properties.villa5.description': 'Al-Rumaithiya Villa Block 12.',
 
-    // Alrayaan Complex
-    'properties.alrayaan.title': 'السالمية الريان 5',
-    'properties.alrayaan.description': 'مجمع الريان في السالمية.',
-    'properties.alrayaan2.title': 'السالمية الريان 7',
-    'properties.alrayaan2.description': 'مجمع الريان في السالمية.',
-    'properties.alrayaan3.title': 'السالمية الريان 8',
-    'properties.alrayaan3.description': 'مجمع الريان في السالمية.',
+// Alrayaan Complex
+'properties.alrayaan.title': 'Salmiya Alrayaan 5',
+'properties.alrayaan.description': 'Alrayaan Complex in Salmiya.',
+'properties.alrayaan2.title': 'Salmiya Alrayaan 7',
+'properties.alrayaan2.description': 'Alrayaan Complex in Salmiya.',
+'properties.alrayaan3.title': 'Salmiya Alrayaan 8',
+'properties.alrayaan3.description': 'Alrayaan Complex in Salmiya.',
 
-    // La Plage Complex
-    'properties.lablag.title': 'البلاج 2',
-    'properties.lablag.description': 'مجمع البلاج على شارع الخليج العربي.',
-    'properties.lablag2.title': 'البلاج',
-    'properties.lablag2.description': 'مجمع البلاج على شارع الخليج العربي.',
+// La Plage Complex
+'properties.lablag.title': 'La Plage 2',
+'properties.lablag.description': 'La Plage Complex on Arabian Gulf Street.',
+'properties.lablag2.title': 'La Plage',
+'properties.lablag2.description': 'La Plage Complex on Arabian Gulf Street.',
 
-    // Mahbullah Properties
-    'properties.mahbullah216.title': 'المهبولة 216',
-    'properties.mahbullah216.description': 'عقار المهبولة 216.',
-    'properties.mahbullah216_2.title': 'المهبولة 216',
-    'properties.mahbullah216_2.description': 'عقار المهبولة 216.',
-    'properties.mahbullahComplex.title': 'عقارات المهبولة 3',
-    'properties.mahbullahComplex.description': 'عقارات المهبولة.',
-    'properties.mahbullahComplex2.title': 'عقارات المهبولة 4',
-    'properties.mahbullahComplex2.description': 'عقارات المهبولة.',
+// Mahbullah Properties
+'properties.mahbullah216.title': 'Mahbullah 216',
+'properties.mahbullah216.description': 'Mahbullah Property 216.',
+'properties.mahbullah216_2.title': 'Mahbullah 216',
+'properties.mahbullah216_2.description': 'Mahbullah Property 216.',
+'properties.mahbullahComplex.title': 'Mahbullah Properties 3',
+'properties.mahbullahComplex.description': 'Mahbullah Properties.',
+'properties.mahbullahComplex2.title': 'Mahbullah Properties 4',
+'properties.mahbullahComplex2.description': 'Mahbullah Properties.',
 
+   
     // Residential Villas
     'properties.residential.title': 'Residential Villa Project',
     'properties.residential.description': 'Part of residential villa development projects currently being developed and managed.',
@@ -92,17 +104,7 @@ export const translations = {
     'properties.daralawad.title': 'Dar Al Awadh Villa',
     'properties.daralawad.description': 'Premium villa development in prime residential area.',
 
-    // Villa Properties
-    'properties.villa1.title': 'ديوان الرميثية قطعة 3',
-    'properties.villa1.description': 'ديوان الرميثية قطعة 3.',
-    'properties.villa2.title': 'سلوى قطعة 7',
-    'properties.villa2.description': 'سلوى قطعة 7.',
-    'properties.villa3.title': 'فيلا الرميثية قطعة 7',
-    'properties.villa3.description': 'فيلا الرميثية قطعة 7.',
-    'properties.villa4.title': 'فيلا الرميثية قطعة 9',
-    'properties.villa4.description': 'فيلا الرميثية قطعة 9.',
-    'properties.villa5.title': 'فيلا الرميثية قطعة 12',
-    'properties.villa5.description': 'فيلا الرميثية قطعة 12.',
+   
 
     // Previous Projects
     'properties.salmiya.title': 'Previous Projects',
@@ -121,34 +123,34 @@ export const translations = {
     'properties.altijari.description': 'Cooperation with Al Tijari Bank during previous project management periods.',
 
     // Al Hamra Residence
-    'properties.hamra.title': 'الحمرا ريزيدنس',
-    'properties.hamra.description': 'الحمرا ريزيدنس.',
-    'properties.hamra2.title': 'الحمرا ريزيدنس',
-    'properties.hamra2.description': 'الحمرا ريزيدنس.',
-    'properties.hamra3.title': 'الحمرا ريزيدنس',
-    'properties.hamra3.description': 'الحمرا ريزيدنس.',
+'properties.hamra.title': 'Al Hamra Residence',
+'properties.hamra.description': 'Al Hamra Residence.',
+'properties.hamra2.title': 'Al Hamra Residence',
+'properties.hamra2.description': 'Al Hamra Residence.',
+'properties.hamra3.title': 'Al Hamra Residence',
+'properties.hamra3.description': 'Al Hamra Residence.',
 
-    // Salam Mall
-    'properties.salam1.title': 'السلام مول 2',
-    'properties.salam1.description': 'السلام مول.',
-    'properties.salam2.title': 'السلام مول 4',
-    'properties.salam2.description': 'السلام مول.',
-    'properties.salam3.title': 'السلام مول 6',
-    'properties.salam3.description': 'السلام مول.',
-    'properties.salam4.title': 'السلام مول 7',
-    'properties.salam4.description': 'السلام مول.',
-    'properties.salam5.title': 'السلام مول 8',
-    'properties.salam5.description': 'السلام مول.',
+// Salam Mall
+'properties.salam1.title': 'Salam Mall 2',
+'properties.salam1.description': 'Salam Mall.',
+'properties.salam2.title': 'Salam Mall 4',
+'properties.salam2.description': 'Salam Mall.',
+'properties.salam3.title': 'Salam Mall 6',
+'properties.salam3.description': 'Salam Mall.',
+'properties.salam4.title': 'Salam Mall 7',
+'properties.salam4.description': 'Salam Mall.',
+'properties.salam5.title': 'Salam Mall 8',
+'properties.salam5.description': 'Salam Mall.',
 
-    // Construction Projects
-    'properties.cartblanche.title': 'حولي كارت بلانش',
-    'properties.cartblanche.description': 'حولي كارت بلانش.',
-    'properties.cartblanche2.title': 'حولي كارت بلانش3',
-    'properties.cartblanche2.description': 'حولي كارت بلانش.',
-    'properties.clinic.title': 'عيادات طبية الشعب البحري',
-    'properties.clinic.description': 'عيادات طبية الشعب البحري.',
-    'properties.clinic2.title': 'عيادات طبية الشعب البحري',
-    'properties.clinic2.description': 'عيادات طبية الشعب البحري.',
+// Construction Projects
+'properties.cartblanche.title': 'Hawally Carte Blanche',
+'properties.cartblanche.description': 'Hawally Carte Blanche.',
+'properties.cartblanche2.title': 'Hawally Carte Blanche 3',
+'properties.cartblanche2.description': 'Hawally Carte Blanche.',
+'properties.clinic.title': 'Shuab Al Bahri Medical Clinics',
+'properties.clinic.description': 'Shuab Al Bahri Medical Clinics.',
+'properties.clinic2.title': 'Shuab Al Bahri Medical Clinics',
+'properties.clinic2.description': 'Shuab Al Bahri Medical Clinics.',
 
     // About
     'about.title': 'About DURRA WORLD CO',
@@ -179,7 +181,21 @@ export const translations = {
     'footer.contact': 'Contact Info',
     'footer.rights': 'All rights reserved.',
     'footer.company': 'Companies',
-    'footer.services': 'Services'
+    'footer.services': 'Services',
+    // Contact
+  
+    'footer.phoneNumbers': 'Phone Numbers',
+    'footer.emails': 'Email Addresses',
+    'footer.address': 'Address',
+    'footer.hamedAwadCo': 'Hamed Awad Co',
+    'footer.worldDurraCo': 'World Durra Co',
+    'footer.gulfDurraCo': 'Gulf Durra Co',
+    'footer.country': 'Kuwait - Mubarek',
+    'footer.area': 'Mubarek Area',
+    'footer.street': 'Khalid Ibn Al-Walid Street',
+    'footer.building': 'Mazaya Tower 1 - Floor 11',
+    'footer.office': 'Office No: B1',
+
   },
 
   ar: {
@@ -342,7 +358,19 @@ export const translations = {
     'footer.contact': 'معلومات الاتصال',
     'footer.rights': 'جميع الحقوق محفوظة.',
     'footer.company': 'الشركات',
-    'footer.services': 'الخدمات'
+    'footer.services': 'الخدمات',
+ 
+    'footer.phoneNumbers': 'أرقام الهواتف',
+    'footer.emails': 'عناوين البريد الإلكتروني',
+    'footer.address': 'العنوان',
+    'footer.hamedAwadCo': 'شركة حامد عوض',
+    'footer.worldDurraCo': 'شركة درة العالم',
+    'footer.gulfDurraCo': 'شركة درة الخليج',
+    'footer.country': 'الكويت - المرقاب',
+    'footer.area': 'منطقة المرقاب',
+    'footer.street': 'شارع خالد بن الوليد',
+    'footer.building': 'برج مزايا 1 - الدور 11',
+    'footer.office': 'مكتب رقم: ب 1'
   }
 };
 

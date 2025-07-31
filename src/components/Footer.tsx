@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Facebook, Instagram } from 'lucide-react';
+import { Facebook, Instagram, Phone, Mail } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 
 const Footer: React.FC = () => {
@@ -25,7 +25,7 @@ const Footer: React.FC = () => {
               </a>
             </div>
           </div>
-          
+                   
           <div>
             <h4 className="text-lg font-semibold mb-4">{t('footer.quickLinks')}</h4>
             <ul className="space-y-2">
@@ -34,7 +34,7 @@ const Footer: React.FC = () => {
               <li><a href="#about" className="text-gray-300 hover:text-amber-400 transition-colors">{t('nav.about')}</a></li>
               <li><a href="#contact" className="text-gray-300 hover:text-amber-400 transition-colors">{t('nav.contact')}</a></li>
             </ul>
-            
+                         
             <div className="mt-6 space-y-3">
               <div>
                 <h4 className="text-lg font-semibold mb-2 text-amber-400">{t('footer.company')}</h4>
@@ -56,20 +56,62 @@ const Footer: React.FC = () => {
               </div>
             </div>
           </div>
-          
+                   
           <div>
             <h4 className="text-lg font-semibold mb-4">{t('footer.contact')}</h4>
-            <ul className="space-y-2 text-gray-300 text-sm">
-              <li>الهاتف: +965 2226 9915</li>
-              <li>durraworld.co@gmail.com</li>
-              <li>الكويت - المرقاب</li>
-              <li>شارع خالد بن الوليد</li>
-              <li>برج مزايا 1 - الدور 11</li>
-              <li>مكتب رقم: ب 1</li>
-            </ul>
+            
+            {/* Phone Numbers */}
+            <div className="mb-4">
+              <h5 className="text-amber-400 font-medium mb-2 flex items-center">
+                <Phone size={16} className="mr-2" />
+                {t('footer.phoneNumbers')}
+              </h5>
+              <ul className="space-y-1 text-gray-300 text-sm">
+                <li>22269915 - {t('footer.hamedAwadCo')}</li>
+                <li>22269916 - {t('footer.worldDurraCo')}</li>
+                <li>22269917 - {t('footer.gulfDurraCo')}</li>
+              </ul>
+            </div>
+
+            {/* Email Addresses */}
+            <div className="mb-4">
+              <h5 className="text-amber-400 font-medium mb-2 flex items-center">
+                <Mail size={16} className="mr-2" />
+                {t('footer.emails')}
+              </h5>
+              <ul className="space-y-1 text-gray-300 text-sm">
+                <li>
+                  <a href="mailto:Hesham@hamedawad-int.com" className="hover:text-amber-400 transition-colors">
+                    Hesham@hamedawad-int.com
+                  </a>
+                </li>
+                <li>
+                  <a href="mailto:Aaldhahi@hamedawad-int.com" className="hover:text-amber-400 transition-colors">
+                    Aaldhahi@hamedawad-int.com
+                  </a>
+                </li>
+                <li>
+                  <a href="mailto:durraworld.co@gmail.com" className="hover:text-amber-400 transition-colors">
+                    durraworld.co@gmail.com
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            {/* Address */}
+            <div>
+              <h5 className="text-amber-400 font-medium mb-2">{t('footer.address')}</h5>
+              <ul className="space-y-1 text-gray-300 text-sm">
+                <li>{t('footer.country')}</li>
+                <li>{t('footer.area')}</li>
+                <li>{t('footer.street')}</li>
+                <li>{t('footer.building')}</li>
+                <li>{t('footer.office')}</li>
+              </ul>
+            </div>
           </div>
         </div>
-        
+                 
         <div className="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
           <p>&copy; 2025 {language === 'ar' ? 'شركة درة العالم' : 'DURRA WORLD CO'}. {t('footer.rights')}</p>
         </div>

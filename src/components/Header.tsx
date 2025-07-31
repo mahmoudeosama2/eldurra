@@ -16,7 +16,7 @@ const Header: React.FC<HeaderProps> = ({ isMenuOpen, setIsMenuOpen }) => {
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-2">
             <div className="text-2xl font-bold text-white">
-              {language === 'ar' ? 'شركة درة العالم' : 'DURRA WORLD CO'}
+              {language === 'ar' ? 'درة العالم' : 'DURRA WORLD CO'}
             </div>
           </div>
 
