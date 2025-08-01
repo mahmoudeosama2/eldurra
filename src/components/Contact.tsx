@@ -27,6 +27,7 @@ const Contact: React.FC = () => {
               </h3>
               <p className="text-white/90">+965 2226 9915</p>
               <p className="text-white/90">+965 2226 9916</p>
+              <p className="text-white/90">+965 2226 9917</p>
             </div>
             
             <div className="text-center">
@@ -39,23 +40,10 @@ const Contact: React.FC = () => {
               <p className="text-white/90">durraworld.co@gmail.com</p>
             </div>
             
-            <div className="text-center">
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-white/20 rounded-full mb-4">
-                <MapPin size={24} className="text-white" />
-              </div>
-              <h3 className="text-xl font-semibold text-white mb-2">
-                {t('contact.address')}
-              </h3>
-           <p className="text-white/90 text-sm whitespace-pre-line">
-  {t('contact.fullAddress')}
-</p>
-
-            </div>
+           
           </div>
           
-          <button className="bg-white text-amber-600 hover:bg-gray-100 px-8 py-4 rounded-lg text-lg font-semibold transition-colors transform hover:scale-105">
-            {t('contact.cta')}
-          </button>
+        
         </div>
       </div>
     </section>

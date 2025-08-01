@@ -151,18 +151,18 @@ const Properties: React.FC = () => {
         //   category: 'current',
         //   gallery: [btbuilding]
         // },
-        {
-          image: daralawad,
-          title: t('properties.daralawad.title'),
-          category: 'current',
-          gallery: [daralawad]
-        },
-        {
-          image: altijari,
-          title: t('properties.altijari.title'),
-          category: 'current',
-          gallery: [altijari]
-        }
+        // {
+        //   image: daralawad,
+        //   title: t('properties.daralawad.title'),
+        //   category: 'current',
+        //   gallery: [daralawad]
+        // },
+        // {
+        //   image: altijari,
+        //   title: t('properties.altijari.title'),
+        //   category: 'current',
+        //   gallery: [altijari]
+        // }
       ]
     },
     {
@@ -172,7 +172,7 @@ const Properties: React.FC = () => {
       properties: [
         {
           image: alrayaan1,
-          title: t('properties.alrayaan.title'),
+        //  title: t('properties.alrayaan.title'),
           category: 'complexes',
           location: 'https://maps.app.goo.gl/n7ZhwdxmRNbRTKe7A',
           featured: false,
@@ -187,27 +187,27 @@ const Properties: React.FC = () => {
       properties: [
         {
           image: lablag1,
-          title: t('properties.lablag.title'),
+       //   title: t('properties.lablag.title'),
           category: 'complexes',
           location: 'https://maps.app.goo.gl/n3va1GHMwC6Q9AVdA',
           gallery: [lablag1, lablag2]
         }
       ]
     },
-    {
-      folderName: t("folders.mahbullahComplex"),
-      folderNameEn: "Mahbullah 216 Properties",
-      category: 'residential',
-      properties: [
-        {
-          image: mahbullah1,
-          title: t('properties.mahbullah216.title'),
-          category: 'residential',
-          location: 'https://maps.app.goo.gl/L6xEWegmmwMEsVcJ8',
-          gallery: [mahbullah1, mahbullah2]
-        }
-      ]
-    },
+    // {
+    //   folderName: t("folders.mahbullahComplex"),
+    //   folderNameEn: "Mahbullah 216 Properties",
+    //   category: 'residential',
+    //   properties: [
+    //     {
+    //       image: mahbullah1,
+    //       title: t('properties.mahbullah216.title'),
+    //       category: 'residential',
+    //       location: 'https://maps.app.goo.gl/L6xEWegmmwMEsVcJ8',
+    //       gallery: [mahbullah1, mahbullah2]
+    //     }
+    //   ]
+    // },
     {
       folderName: t("folders.mahbullahComplex"),
       folderNameEn: "Mahbullah Complex",
@@ -215,7 +215,7 @@ const Properties: React.FC = () => {
       properties: [
         {
           image: mahbullahComplex1,
-          title: t('properties.mahbullahComplex.title'),
+       //   title: t('properties.mahbullahComplex.title'),
           category: 'complexes',
           location: 'https://maps.app.goo.gl/SwHvnd4NYuNvPEJ68',
           featured: false,
@@ -230,10 +230,10 @@ const Properties: React.FC = () => {
       properties: [
         {
           image: villa1,
-          title: t('properties.villa1.title'),
+        //  title: t('properties.villa1.title'),
           category: 'residential',
           location: 'https://maps.app.goo.gl/dFJEcctsmeZQeoMQ6',
-          gallery: [villa1, villa2, villa3, villa4, villa5]
+          gallery: [villa1, villa2, villa3, villa4, villa5 ,mahbullah1 ]
         }
       ]
     },
@@ -398,7 +398,7 @@ const Properties: React.FC = () => {
                           <div className="absolute top-4 left-4 z-20">
                             <div className="flex items-center gap-1 bg-gradient-to-r from-amber-500 to-amber-600 text-black px-3 py-1 rounded-full text-sm font-bold shadow-lg">
                               <Star size={14} fill="currentColor" />
-                              <span>مميز</span>
+                              <span>{t("distinct")}</span>
                             </div>
                           </div>
                         )}

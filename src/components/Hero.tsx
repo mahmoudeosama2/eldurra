@@ -45,9 +45,9 @@ const Hero: React.FC = () => {
 
        
         
-        <button className="bg-amber-500 hover:bg-amber-600 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-xl">
+        {/* <button className="bg-amber-500 hover:bg-amber-600 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-xl">
           {t('hero.cta')}
-        </button>
+        </button> */}
       </div>
     </section>
   );

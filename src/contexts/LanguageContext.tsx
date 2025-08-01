@@ -56,11 +56,11 @@ export const translations = {
 
     'properties.portfolio.title': 'Real Estate Portfolio',
     'properties.portfolio.description': 'Various projects managed or leased across Kuwait.',
-
+ "distinct" : "Distinct",
     'properties.btbuilding.title': 'Main Office',
     'properties.btbuilding.description': 'Main office location at Mazaya Towers, Kuwait.',
 // Villa Properties
-'properties.villa1.title': 'Al-Rumaithiya Diwan Block 3',
+'properties.villa1.title': '',
 'properties.villa1.description': 'Al-Rumaithiya Diwan Block 3.',
 'properties.villa2.title': 'Salwa Block 7',
 'properties.villa2.description': 'Salwa Block 7.',
@@ -79,11 +79,11 @@ export const translations = {
 'properties.alrayaan3.title': 'Salmiya Alrayaan 8',
 'properties.alrayaan3.description': 'Alrayaan Complex in Salmiya.',
 
-// La Plage Complex
-'properties.lablag.title': 'La Plage 2',
-'properties.lablag.description': 'La Plage Complex on Arabian Gulf Street.',
-'properties.lablag2.title': 'La Plage',
-'properties.lablag2.description': 'La Plage Complex on Arabian Gulf Street.',
+// La Blage Complex
+'properties.lablag.title': 'La Blage 2',
+'properties.lablag.description': 'La Blage Complex on Arabian Gulf Street.',
+'properties.lablag2.title': 'La Blage',
+'properties.lablag2.description': 'La Blage Complex on Arabian Gulf Street.',
 
 // Mahbullah Properties
 'properties.mahbullah216.title': 'Mahbullah 216',
@@ -108,7 +108,7 @@ export const translations = {
 
     // Previous Projects
     'properties.salmiya.title': 'Previous Projects',
-    'properties.salmiya.description': 'Projects previously managed including La Plage, Al Hamra Complex, Al Rayan, and Salam Mall management period. Management handled personally by Hamed Awadh before WORLD DURRA COmpany establishment.',
+    'properties.salmiya.description': 'Projects previously managed including La Blage, Al Hamra Complex, Al Rayan, and Salam Mall management period. Management handled personally by Hamed Awadh before WORLD DURRA COmpany establishment.',
 
     'properties.lolohyber.title': 'Salam Mall Management Period',
     'properties.lolohyber.description': 'Commercial entities including Lulu Hypermarket and Al Tijari Bank managed during Salam Mall administration period.',
@@ -132,7 +132,7 @@ export const translations = {
 "location.openInMaps": "Open in Google Maps",    "coordinates": "📍 Coordinates: 29.3743° N, 47.9894° E",
 
 // Salam Mall
-'properties.salam1.title': 'Salam Mall 2',
+'properties.salam1.title': 'Al Salam Mall',
 'properties.salam1.description': 'Salam Mall.',
 'properties.salam2.title': 'Salam Mall 4',
 'properties.salam2.description': 'Salam Mall.',
@@ -177,7 +177,7 @@ export const translations = {
     'contact.cta': 'Get in Touch',
 
     // Footer
-    'footer.description': 'WORLD DURRA CO – Real Estate Management and Leasing.',
+    'footer.description': 'Real Estate Management and Leasing.',
     'footer.quickLinks': 'Quick Links',
     'footer.contact': 'Contact Info',
     'footer.rights': 'All rights reserved.',
@@ -201,10 +201,10 @@ export const translations = {
   'categories.residential': 'Residential',
   'categories.previous': 'Previous Properties',
   'categories.construction': 'Construction','contact.fullAddress': 'Kuwait - Al-Mirqab - Khalid Bin Al-Waleed Street\nMazaya Tower 1 - 11th Floor',  "folders.current": "Current Properties",
-  "folders.alrayaan": "Alrayaan Complex - Salmiyah",
-  "folders.laplage": "La Plage Complex - Arabian Gulf Street",
+  "folders.alrayaan": "Alrayaan Complex  Salmiyah",
+  "folders.laplage": "La Blage Complex Arabian Gulf Street",
   "folders.mahbullah216": "Mahbullah 216 Properties",
-  "folders.mahbullahComplex": "Mahbullah Complex",
+  "folders.mahbullahComplex": "Mahbullah 216",
   "folders.villas": "Residential Houses and Villas",
   "folders.previous": "Previously Managed Properties",
   "folders.construction": "Construction and Renovation Projects"
@@ -217,10 +217,10 @@ export const translations = {
     "move" : " اسحب أو استخدم الأزرار للتنقل",
     'categories.all': 'جميع العقارات','contact.fullAddress': 'الكويت - المرقاب - شارع خالد بن الوليد\nبرج مزايا 1 - الدور 11',
   "folders.current": "العقارات الحالية",
-  "folders.alrayaan": "مجمع الريان - السالمية",
-  "folders.laplage": "مجمع البلاج - شارع الخليج العربي",
+  "folders.alrayaan": "مجمع الريان  السالمية",
+  "folders.laplage": "مجمع البلاج شارع الخليج العربي",
   "folders.mahbullah216": "عقارات المهبولة 216",
-  "folders.mahbullahComplex": "مجمع المهبولة",
+  "folders.mahbullahComplex": " المهبولة216 ",
   "folders.villas": "بيوت وفلل سكنية",
   "folders.previous": "عقارات سابقة تم إدارتها",
   "folders.construction": "عقارات تم إنشاؤها وترميمها",
@@ -307,7 +307,7 @@ export const translations = {
     "coordinates": "📍 الإحداثيات: 29.3743° N, 47.9894° E",
 "contact.fullAddress2" : "العنوان الكامل",
     // الفيلل
-    'properties.villa1.title': 'ديوان الرميثية قطعة 3',
+    'properties.villa1.title': "",
     'properties.villa1.description': 'ديوان الرميثية قطعة 3.',
     'properties.villa2.title': 'سلوى قطعة 7',
     'properties.villa2.description': 'سلوى قطعة 7.',
@@ -343,7 +343,7 @@ export const translations = {
     'properties.hamra3.description': 'الحمرا ريزيدنس.',
 
     // السلام مول
-    'properties.salam1.title': 'السلام مول 2',
+    'properties.salam1.title': 'السلام مول ',
     'properties.salam1.description': 'السلام مول.',
     'properties.salam2.title': 'السلام مول 4',
     'properties.salam2.description': 'السلام مول.',
@@ -384,13 +384,14 @@ export const translations = {
     'contact.address': 'العنوان',
     'contact.cta': 'تواصل الآن',
 "video": "فيديو",
-    'footer.description': 'شركة درة العالم – لإدارة وتأجير العقارات.',
+    'footer.description': '  لإدارة وتأجير العقارات.',
     'footer.quickLinks': 'روابط سريعة',
     'footer.contact': 'معلومات الاتصال',
     'footer.rights': 'جميع الحقوق محفوظة.',
     'footer.company': 'الشركات',
     'footer.services': 'الخدمات',
  "gallery": "معرض الصور",
+ "distinct": "مميز",
     'footer.phoneNumbers': 'أرقام الهواتف',
     'footer.emails': 'عناوين البريد الإلكتروني',
     'footer.address': 'العنوان',
