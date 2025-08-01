@@ -1,11 +1,46 @@
 import * as React from 'react';
-import { X, MapPin, Eye, ArrowRight, Star, Calendar, Building, Play } from 'lucide-react';
+import { X, MapPin, Eye, ArrowRight, Star, Calendar, Building, Play, ChevronLeft, ChevronRight } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 
 // Import all your actual images
 import jabriyaImg from '../assets/jabriya.jpg';
-import one from '../assets/1.jpg';
-import two from '../assets/2.jpg';
+
+// Al Jabriya Hotel Images
+import aljabria1 from '../assets/aljabriahotel/asd.jpg';
+import aljabria2 from '../assets/aljabriahotel/asdd.jpg';
+import aljabria3 from '../assets/aljabriahotel/casc.jpg';
+import aljabria4 from '../assets/aljabriahotel/cx.jpg';
+import aljabria5 from '../assets/aljabriahotel/dds.jpg';
+import aljabria6 from '../assets/aljabriahotel/ew.jpg';
+import aljabria7 from '../assets/aljabriahotel/fs.jpg';
+import aljabria8 from '../assets/aljabriahotel/hf.jpg';
+import aljabria9 from '../assets/aljabriahotel/hhf.jpg';
+import aljabria10 from '../assets/aljabriahotel/jhg.jpg';
+import aljabria11 from '../assets/aljabriahotel/jj.jpg';
+import aljabria12 from '../assets/aljabriahotel/mb.jpg';
+import aljabria13 from '../assets/aljabriahotel/re.jpg';
+import aljabria14 from '../assets/aljabriahotel/Screenshot 2025-07-29 165559.png';
+import aljabria15 from '../assets/aljabriahotel/Screenshot 2025-07-29 170035.png';
+import aljabria16 from '../assets/aljabriahotel/Screenshot 2025-07-29 170427.png';
+import aljabria17 from '../assets/aljabriahotel/vcvcv.jpg';
+import aljabria18 from '../assets/aljabriahotel/vvc.jpg';
+import aljabria19 from '../assets/aljabriahotel/vvcvx.jpg';
+import aljabria20 from '../assets/aljabriahotel/WhatsApp Image 2025-08-01 at 22.31.53_9f302c48.jpg';
+import aljabria21 from '../assets/aljabriahotel/WhatsApp Image 2025-08-01 at 22.31.53_77e9edfb.jpg';
+import aljabria22 from '../assets/aljabriahotel/WhatsApp Image 2025-08-01 at 22.31.53_94b1c07a.jpg';
+import aljabria23 from '../assets/aljabriahotel/WhatsApp Image 2025-08-01 at 22.31.54_4a009ce5.jpg';
+import aljabria24 from '../assets/aljabriahotel/WhatsApp Image 2025-08-01 at 22.31.54_04b4a11c.jpg';
+import aljabria25 from '../assets/aljabriahotel/WhatsApp Image 2025-08-01 at 22.31.54_9ed7b2c2.jpg';
+import aljabria26 from '../assets/aljabriahotel/WhatsApp Image 2025-08-01 at 22.31.54_b65989e5.jpg';
+import aljabria27 from '../assets/aljabriahotel/WhatsApp Image 2025-08-01 at 22.31.55_7b5872aa.jpg';
+import aljabria28 from '../assets/aljabriahotel/WhatsApp Image 2025-08-01 at 22.31.55_961561db.jpg';
+import aljabria29 from '../assets/aljabriahotel/WhatsApp Image 2025-08-01 at 22.31.55_cff12cc7.jpg';
+import aljabria30 from '../assets/aljabriahotel/WhatsApp Image 2025-08-01 at 22.31.55_df663050.jpg';
+import aljabria31 from '../assets/aljabriahotel/WhatsApp Image 2025-08-01 at 22.31.55_ee00ab6e.jpg';
+import aljabria32 from '../assets/aljabriahotel/WhatsApp Image 2025-08-01 at 22.31.56_7842b42a.jpg';
+import aljabria33 from '../assets/aljabriahotel/WhatsApp Image 2025-08-01 at 22.31.56_c9a5ffee.jpg';
+import aljabria34 from '../assets/aljabriahotel/WhatsApp Image 2025-08-01 at 22.31.56_ce9dc41d.jpg';
+
 import three from '../assets/3.jpg';
 import four from '../assets/4.jpg';
 import five from '../assets/5.jpg';
@@ -62,6 +97,37 @@ const Properties: React.FC = () => {
   const [selectedVideo, setSelectedVideo] = React.useState<string | null>(null);
   const [activeCategory, setActiveCategory] = React.useState<string>('all');
   const [hoveredCard, setHoveredCard] = React.useState<string | null>(null);
+  
+  // Refs for scroll containers (one for each property that might need scrolling)
+  const scrollRefs = React.useRef<{ [key: string]: HTMLDivElement | null }>({});
+
+  // Al Jabriya complete gallery
+  const aljabriaGallery = [
+    jabriyaImg, aljabria1, aljabria2, aljabria3, aljabria4, aljabria5, 
+    aljabria6, aljabria7, aljabria8, aljabria9, aljabria10, aljabria11, 
+    aljabria12, aljabria13, aljabria14, aljabria15, aljabria16, aljabria17, 
+    aljabria18, aljabria19, aljabria20, aljabria21, aljabria22, aljabria23, 
+    aljabria24, aljabria25, aljabria26, aljabria27, aljabria28, aljabria29, 
+    aljabria30, aljabria31, aljabria32, aljabria33, aljabria34, 
+    five, sex, three, four
+  ];
+
+  // Scroll functions
+  const scrollGallery = (direction: 'left' | 'right', scrollKey: string) => {
+    const container = scrollRefs.current[scrollKey];
+    if (container) {
+      const scrollAmount = 300; // Amount to scroll in pixels
+      const currentScroll = container.scrollLeft;
+      const targetScroll = direction === 'left' 
+        ? currentScroll - scrollAmount 
+        : currentScroll + scrollAmount;
+      
+      container.scrollTo({
+        left: targetScroll,
+        behavior: 'smooth'
+      });
+    }
+  };
 
   // Grouped properties by folder/category with your actual images and original translations
   const propertyGroups = [
@@ -74,50 +140,28 @@ const Properties: React.FC = () => {
           image: jabriyaImg,
           title: t('properties.jabriya.title'),
           category: 'current',
-          featured: false,
-          video: video, // Adding video property to Jabriya
-          gallery: [five, sex, three, four] // Adding gallery images
+          featured: true,
+          video: video,
+          gallery: aljabriaGallery,
+          isHighlight: true // Flag for special treatment
         },
         // {
-        //   image: one,
-        //   title: t('properties.hotel.title'),
+        //   image: btbuilding,
+        //   title: t('properties.btbuilding.title'),
         //   category: 'current',
-        //   featured: false
+        //   gallery: [btbuilding]
         // },
-        // {
-        //   image: two,
-        //   title: t('properties.mall.title'),
-        //   category: 'current'
-        // },
-        {
-          image: btbuilding,
-          title: t('properties.btbuilding.title'),
-          category: 'current'
-        },
         {
           image: daralawad,
           title: t('properties.daralawad.title'),
-          category: 'current'
-        },
-        {
-          image: lolohyber,
-          title: t('properties.lolohyber.title'),
-          category: 'current'
-        },
-        {
-          image: lolohyber2,
-          title: t('properties.lolohyber2.title'),
-          category: 'current'
-        },
-        {
-          image: lolohyber3,
-          title: t('properties.lolohyber3.title'),
-          category: 'current'
+          category: 'current',
+          gallery: [daralawad]
         },
         {
           image: altijari,
           title: t('properties.altijari.title'),
-          category: 'current'
+          category: 'current',
+          gallery: [altijari]
         }
       ]
     },
@@ -131,19 +175,8 @@ const Properties: React.FC = () => {
           title: t('properties.alrayaan.title'),
           category: 'complexes',
           location: 'https://maps.app.goo.gl/n7ZhwdxmRNbRTKe7A',
-          featured: false
-        },
-        {
-          image: alrayaan2,
-          title: t('properties.alrayaan2.title'),
-          category: 'complexes',
-          location: 'https://maps.app.goo.gl/n7ZhwdxmRNbRTKe7A'
-        },
-        {
-          image: alrayaan3,
-          title: t('properties.alrayaan3.title'),
-          category: 'complexes',
-          location: 'https://maps.app.goo.gl/n7ZhwdxmRNbRTKe7A'
+          featured: false,
+          gallery: [alrayaan1, alrayaan2, alrayaan3]
         }
       ]
     },
@@ -156,13 +189,8 @@ const Properties: React.FC = () => {
           image: lablag1,
           title: t('properties.lablag.title'),
           category: 'complexes',
-          location: 'https://maps.app.goo.gl/n3va1GHMwC6Q9AVdA'
-        },
-        {
-          image: lablag2,
-          title: t('properties.lablag2.title'),
-          category: 'complexes',
-          location: 'https://maps.app.goo.gl/n3va1GHMwC6Q9AVdA'
+          location: 'https://maps.app.goo.gl/n3va1GHMwC6Q9AVdA',
+          gallery: [lablag1, lablag2]
         }
       ]
     },
@@ -175,13 +203,8 @@ const Properties: React.FC = () => {
           image: mahbullah1,
           title: t('properties.mahbullah216.title'),
           category: 'residential',
-          location: 'https://maps.app.goo.gl/L6xEWegmmwMEsVcJ8'
-        },
-        {
-          image: mahbullah2,
-          title: t('properties.mahbullah216_2.title'),
-          category: 'residential',
-          location: 'https://maps.app.goo.gl/L6xEWegmmwMEsVcJ8'
+          location: 'https://maps.app.goo.gl/L6xEWegmmwMEsVcJ8',
+          gallery: [mahbullah1, mahbullah2]
         }
       ]
     },
@@ -195,13 +218,8 @@ const Properties: React.FC = () => {
           title: t('properties.mahbullahComplex.title'),
           category: 'complexes',
           location: 'https://maps.app.goo.gl/SwHvnd4NYuNvPEJ68',
-          featured: false
-        },
-        {
-          image: mahbullahComplex2,
-          title: t('properties.mahbullahComplex2.title'),
-          category: 'complexes',
-          location: 'https://maps.app.goo.gl/SwHvnd4NYuNvPEJ68'
+          featured: false,
+          gallery: [mahbullahComplex1, mahbullahComplex2]
         }
       ]
     },
@@ -214,31 +232,8 @@ const Properties: React.FC = () => {
           image: villa1,
           title: t('properties.villa1.title'),
           category: 'residential',
-          location: 'https://maps.app.goo.gl/dFJEcctsmeZQeoMQ6'
-        },
-        {
-          image: villa2,
-          title: t('properties.villa2.title'),
-          category: 'residential',
-          location: 'https://maps.app.goo.gl/BgVPZLx9aEg8KLAP9'
-        },
-        {
-          image: villa3,
-          title: t('properties.villa3.title'),
-          category: 'residential',
-          location: 'https://maps.app.goo.gl/Qp7h81azX6HgxmYd6'
-        },
-        {
-          image: villa4,
-          title: t('properties.villa4.title'),
-          category: 'residential',
-          location: 'https://maps.app.goo.gl/Gohn47ahpbGXRF3UA'
-        },
-        {
-          image: villa5,
-          title: t('properties.villa5.title'),
-          category: 'residential',
-          location: 'https://maps.app.goo.gl/jCBucykDyR7yVQ1a6'
+          location: 'https://maps.app.goo.gl/dFJEcctsmeZQeoMQ6',
+          gallery: [villa1, villa2, villa3, villa4, villa5]
         }
       ]
     },
@@ -250,42 +245,14 @@ const Properties: React.FC = () => {
         {
           image: hamra1,
           title: t('properties.hamra.title'),
-          category: 'previous'
-        },
-        {
-          image: hamra2,
-          title: t('properties.hamra2.title'),
-          category: 'previous'
-        },
-        {
-          image: hamra3,
-          title: t('properties.hamra3.title'),
-          category: 'previous'
+          category: 'previous',
+          gallery: [hamra1, hamra2, hamra3]
         },
         {
           image: salam1,
           title: t('properties.salam1.title'),
-          category: 'previous'
-        },
-        {
-          image: salam2,
-          title: t('properties.salam2.title'),
-          category: 'previous'
-        },
-        {
-          image: salam3,
-          title: t('properties.salam3.title'),
-          category: 'previous'
-        },
-        {
-          image: salam4,
-          title: t('properties.salam4.title'),
-          category: 'previous'
-        },
-        {
-          image: salam5,
-          title: t('properties.salam5.title'),
-          category: 'previous'
+          category: 'previous',
+          gallery: [salam1, salam2, salam3, salam4, salam5]
         }
       ]
     },
@@ -298,25 +265,15 @@ const Properties: React.FC = () => {
           image: cartblanche1,
           title: t('properties.cartblanche.title'),
           category: 'construction',
-          location: 'https://maps.app.goo.gl/aEMH9R7P6fSxadVPA'
-        },
-        {
-          image: cartblanche2,
-          title: t('properties.cartblanche2.title'),
-          category: 'construction',
-          location: 'https://maps.app.goo.gl/njEfAtYKtNLeT8GG9'
+          location: 'https://maps.app.goo.gl/aEMH9R7P6fSxadVPA',
+          gallery: [cartblanche1, cartblanche2]
         },
         {
           image: clinic1,
           title: t('properties.clinic.title'),
           category: 'construction',
-          location: 'https://maps.app.goo.gl/4HxqXRS89skExD6P9'
-        },
-        {
-          image: clinic2,
-          title: t('properties.clinic2.title'),
-          category: 'construction',
-          location: 'https://maps.app.goo.gl/4HxqXRS89skExD6P9'
+          location: 'https://maps.app.goo.gl/4HxqXRS89skExD6P9',
+          gallery: [clinic1, clinic2]
         }
       ]
     }
@@ -362,7 +319,6 @@ const Properties: React.FC = () => {
       <div className="container mx-auto px-4 relative z-10">
         {/* Header */}
         <div className="text-center mb-16">
-       
           <h2 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-white via-amber-100 to-amber-200 bg-clip-text text-transparent mb-6">
             {t('properties.title')}
           </h2>
@@ -401,7 +357,7 @@ const Properties: React.FC = () => {
         <div className="space-y-16">
           {filteredGroups.map((group, groupIndex) => (
             <div key={groupIndex} className="space-y-8">
-              {/* Group Header - Updated with single amber color */}
+              {/* Group Header */}
               <div className="text-center">
                 <div className="inline-flex items-center gap-3 bg-amber-500/20 backdrop-blur-sm border border-amber-500/30 rounded-full px-8 py-4 mb-4">
                   <Building className="w-6 h-6 text-amber-400" />
@@ -413,125 +369,212 @@ const Properties: React.FC = () => {
               </div>
 
               {/* Properties Grid for this group */}
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-8">
                 {group.properties.map((property, index) => {
                   const cardId = `${group.category}-${groupIndex}-${index}`;
+                  const scrollKey = `scroll-${cardId}`;
                   const isHovered = hoveredCard === cardId;
+                  const isJabriya = property.isHighlight;
+                  const hasMultipleImages = property.gallery && property.gallery.length > 1;
                   
                   return (
                     <div
                       key={cardId}
-                      className={`group relative bg-gradient-to-br from-slate-800/80 to-slate-900/80 backdrop-blur-sm rounded-2xl overflow-hidden border border-slate-700/50 transition-all duration-500 hover:border-amber-500/50 ${
+                      className={`group relative transition-all duration-500 ${
+                        isJabriya 
+                          ? 'md:col-span-2 lg:col-span-2 xl:col-span-3' // Full width for Jabriya
+                          : ''
+                      } ${
                         property.featured ? 'ring-2 ring-amber-500/20' : ''
                       } ${isHovered ? 'transform scale-105 shadow-2xl shadow-amber-500/10' : 'hover:transform hover:scale-102'}`}
                       onMouseEnter={() => setHoveredCard(cardId)}
                       onMouseLeave={() => setHoveredCard(null)}
                     >
-                      {/* Featured Badge */}
-                      {property.featured && (
-                        <div className="absolute top-4 left-4 z-20">
-                          <div className="flex items-center gap-1 bg-gradient-to-r from-amber-500 to-amber-600 text-black px-3 py-1 rounded-full text-sm font-bold shadow-lg">
-                            <Star size={14} fill="currentColor" />
-                            <span>مميز</span>
-                          </div>
-                        </div>
-                      )}
-
-                      {/* Video Badge */}
-                      {property.video && (
-                        <div className="absolute top-4 right-4 z-20">
-                          <div className="flex items-center gap-1 bg-gradient-to-r from-red-500 to-red-600 text-white px-3 py-1 rounded-full text-sm font-bold shadow-lg">
-                            <Play size={14} fill="currentColor" />
-                            <span>{t('video')}</span>
-                          </div>
-                        </div>
-                      )}
-
-                      {/* Image Container */}
-                      <div className="relative overflow-hidden h-64">
-                        <img
-                          src={property.image}
-                          alt={property.title}
-                          className="w-full h-full object-cover transition-all duration-700 group-hover:scale-110"
-                        />
-                        
-                        {/* Gradient Overlay */}
-                        <div className={`absolute inset-0 bg-gradient-to-t ${getCategoryColor(property.category)} opacity-0 group-hover:opacity-20 transition-opacity duration-500`} />
-                        
-                        {/* Action Buttons Overlay */}
-                        <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-all duration-300 flex items-center justify-center">
-                          <div className="flex gap-3 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
-                            <button
-                              onClick={() => setSelectedImage(property.image)}
-                              className="bg-white/90 hover:bg-white text-black p-3 rounded-full transition-all duration-200 shadow-lg hover:shadow-xl hover:scale-110"
-                            >
-                              <Eye size={20} />
-                            </button>
-                            {property.video && (
-                              <button
-                                onClick={() => setSelectedVideo(property.video!)}
-                                className="bg-red-500 hover:bg-red-600 text-white p-3 rounded-full transition-all duration-200 shadow-lg hover:shadow-xl hover:scale-110"
-                              >
-                                <Play size={20} />
-                              </button>
-                            )}
-                            {property.location && (
-                              <button
-                                onClick={() => handleLocationClick(property.location!)}
-                                className="bg-amber-500 hover:bg-amber-600 text-black p-3 rounded-full transition-all duration-200 shadow-lg hover:shadow-xl hover:scale-110"
-                              >
-                                <MapPin size={20} />
-                              </button>
-                            )}
-                          </div>
-                        </div>
-                      </div>
-
-                      {/* Content */}
-                      <div className="p-6">
-                        {/* Category Tag */}
-                        <div className="mb-3">
-                          <span className={`inline-block px-3 py-1 rounded-full text-xs font-semibold bg-gradient-to-r ${getCategoryColor(property.category)} text-white`}>
-                            {categories.find(c => c.id === property.category)?.name}
-                          </span>
-                        </div>
-
-                        <h4 className="text-xl font-bold text-white mb-3 line-clamp-2 group-hover:text-amber-400 transition-colors duration-300">
-                          {property.title}
-                        </h4>
-                        {/* Gallery thumbnails */}
-                        {property.gallery && property.gallery.length > 0 && (
-                          <div className="mt-4">
-                            <div className="flex items-center gap-2 mb-3">
-                              <div className="w-4 h-4 bg-gradient-to-r from-amber-500 to-amber-600 rounded-full"></div>
-                              <span className="text-sm text-gray-400 font-medium">{t("gallery")}</span>
-                            </div>
-                            <div className="grid grid-cols-4 gap-2">
-                              {property.gallery.map((galleryImg, galleryIndex) => (
-                                <div
-                                  key={galleryIndex}
-                                  className="relative aspect-square rounded-lg overflow-hidden cursor-pointer group/thumb hover:ring-2 hover:ring-amber-500/50 transition-all duration-200"
-                                  onClick={() => setSelectedImage(galleryImg)}
-                                >
-                                  <img
-                                    src={galleryImg}
-                                    alt={`${property.title} - صورة ${galleryIndex + 1}`}
-                                    className="w-full h-full object-cover transition-transform duration-200 group-hover/thumb:scale-110"
-                                  />
-                                  <div className="absolute inset-0 bg-black/20 opacity-0 group-hover/thumb:opacity-100 transition-opacity duration-200 flex items-center justify-center">
-                                    <Eye size={16} className="text-white" />
-                                  </div>
-                                </div>
-                              ))}
+                      <div className={`bg-gradient-to-br from-slate-800/80 to-slate-900/80 backdrop-blur-sm rounded-2xl overflow-hidden border border-slate-700/50 transition-all duration-500 hover:border-amber-500/50 ${
+                        isJabriya ? 'ring-4 ring-amber-500/30 shadow-2xl shadow-amber-500/20' : ''
+                      }`}>
+                        {/* Featured Badge */}
+                        {property.featured && (
+                          <div className="absolute top-4 left-4 z-20">
+                            <div className="flex items-center gap-1 bg-gradient-to-r from-amber-500 to-amber-600 text-black px-3 py-1 rounded-full text-sm font-bold shadow-lg">
+                              <Star size={14} fill="currentColor" />
+                              <span>مميز</span>
                             </div>
                           </div>
                         )}
-                        
-                      </div>
 
-                      {/* Hover Glow Effect */}
-                      <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
-                        <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-amber-500/10 to-amber-600/10 blur-xl" />
+                        {/* Video Badge */}
+                        {property.video && (
+                          <div className="absolute top-4 right-4 z-20">
+                            <div className="flex items-center gap-1 bg-gradient-to-r from-red-500 to-red-600 text-white px-3 py-1 rounded-full text-sm font-bold shadow-lg">
+                              <Play size={14} fill="currentColor" />
+                              <span>{t('video')}</span>
+                            </div>
+                          </div>
+                        )}
+
+                        {/* Main Image Container - تم تطويل صورة الجابرية */}
+                        <div className={`relative overflow-hidden ${isJabriya ? 'h-96 md:h-[28rem]' : 'h-80'}`}>
+                          <img
+                            src={property.image}
+                            alt={property.title}
+                            className="w-full h-full object-cover transition-all duration-700 group-hover:scale-110"
+                          />
+                          
+                          {/* Gradient Overlay */}
+                          <div className={`absolute inset-0 bg-gradient-to-t ${getCategoryColor(property.category)} opacity-0 group-hover:opacity-20 transition-opacity duration-500`} />
+                          
+                          {/* Action Buttons Overlay */}
+                          <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-all duration-300 flex items-center justify-center">
+                            <div className="flex gap-3 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                              <button
+                                onClick={() => setSelectedImage(property.image)}
+                                className="bg-white/90 hover:bg-white text-black p-3 rounded-full transition-all duration-200 shadow-lg hover:shadow-xl hover:scale-110"
+                              >
+                                <Eye size={20} />
+                              </button>
+                              {property.video && (
+                                <button
+                                  onClick={() => setSelectedVideo(property.video!)}
+                                  className="bg-red-500 hover:bg-red-600 text-white p-3 rounded-full transition-all duration-200 shadow-lg hover:shadow-xl hover:scale-110"
+                                >
+                                  <Play size={20} />
+                                </button>
+                              )}
+                              {property.location && (
+                                <button
+                                  onClick={() => handleLocationClick(property.location!)}
+                                  className="bg-amber-500 hover:bg-amber-600 text-black p-3 rounded-full transition-all duration-200 shadow-lg hover:shadow-xl hover:scale-110"
+                                >
+                                  <MapPin size={20} />
+                                </button>
+                              )}
+                            </div>
+                          </div>
+                        </div>
+
+                        {/* Content */}
+                        <div className="p-6">
+                          {/* Category Tag */}
+                          <div className="mb-3">
+                            <span className={`inline-block px-3 py-1 rounded-full text-xs font-semibold bg-gradient-to-r ${getCategoryColor(property.category)} text-white`}>
+                              {categories.find(c => c.id === property.category)?.name}
+                            </span>
+                          </div>
+
+                          <h4 className={`font-bold text-white mb-3 line-clamp-2 group-hover:text-amber-400 transition-colors duration-300 ${
+                            isJabriya ? 'text-2xl md:text-3xl' : 'text-xl'
+                          }`}>
+                            {property.title}
+                          </h4>
+
+                          {/* Special description for Jabriya */}
+                          {isJabriya && (
+                            <p className="text-gray-300 text-lg mb-4 leading-relaxed">
+{t('title.aljbria')}                            </p>
+                          )}
+
+                          {/* Gallery thumbnails with scroll controls */}
+                          {hasMultipleImages && (
+                            <div className="mt-4">
+                              <div className="flex items-center justify-between mb-3">
+                                <div className="flex items-center gap-2">
+                                  <div className="w-4 h-4 bg-gradient-to-r from-amber-500 to-amber-600 rounded-full"></div>
+                                  <span className="text-sm text-gray-400 font-medium">
+                                    {t("gallery")} ({property.gallery!.length} )
+                                  </span>
+                                </div>
+                                
+                                {/* Scroll Controls - Show only for galleries with many images */}
+                                {property.gallery!.length > 5 && (
+                                  <div className="flex gap-2">
+                                    <button
+                                      onClick={() => scrollGallery('left', scrollKey)}
+                                      className="bg-slate-700/50 hover:bg-slate-600/50 text-amber-400 p-2 rounded-full transition-all duration-200 hover:scale-110"
+                                      aria-label="التمرير للخلف"
+                                    >
+                                      <ChevronLeft size={16} />
+                                    </button>
+                                    <button
+                                      onClick={() => scrollGallery('right', scrollKey)}
+                                      className="bg-slate-700/50 hover:bg-slate-600/50 text-amber-400 p-2 rounded-full transition-all duration-200 hover:scale-110"
+                                      aria-label="التمرير للأمام"
+                                    >
+                                      <ChevronRight size={16} />
+                                    </button>
+                                  </div>
+                                )}
+                              </div>
+                              
+                              {/* Horizontal Scrollable Gallery with improved styling */}
+                              <div className="relative">
+                                <div 
+                                  ref={(el) => scrollRefs.current[scrollKey] = el}
+                                  className={`flex gap-3 overflow-x-auto scrollbar-hide pb-2 scroll-smooth ${
+                                    isJabriya ? 'snap-x snap-mandatory' : ''
+                                  }`} 
+                                  style={{ 
+                                    scrollbarWidth: 'none', 
+                                    msOverflowStyle: 'none',
+                                    WebkitScrollbar: { display: 'none' }
+                                  }}
+                                >
+                                  {property.gallery!.map((galleryImg, galleryIndex) => (
+                                    <div
+                                      key={galleryIndex}
+                                      className={`relative flex-shrink-0 w-20 h-20 rounded-lg overflow-hidden cursor-pointer group/thumb hover:ring-2 hover:ring-amber-500/50 transition-all duration-200 hover:scale-105 ${
+                                        isJabriya ? 'snap-start' : ''
+                                      }`}
+                                      onClick={() => setSelectedImage(galleryImg)}
+                                    >
+                                      <img
+                                        src={galleryImg}
+                                        alt={`${property.title} - صورة ${galleryIndex + 1}`}
+                                        className="w-full h-full object-cover transition-transform duration-200"
+                                        loading="lazy"
+                                      />
+                                      <div className="absolute inset-0 bg-black/20 opacity-0 group-hover/thumb:opacity-100 transition-opacity duration-200 flex items-center justify-center">
+                                        <Eye size={14} className="text-white" />
+                                      </div>
+                                      {/* Image Number Badge */}
+                                      <div className="absolute top-1 right-1 bg-black/70 text-white text-xs px-1.5 py-0.5 rounded opacity-0 group-hover/thumb:opacity-100 transition-opacity duration-200">
+                                        {galleryIndex + 1}
+                                      </div>
+                                    </div>
+                                  ))}
+                                </div>
+                                
+                                {/* Enhanced Progress Indicator for Jabriya */}
+                                {isJabriya && (
+                                  <div className="flex justify-center mt-3">
+                                    <div className="flex items-center gap-2 bg-slate-800/50 backdrop-blur-sm px-3 py-1.5 rounded-full">
+                                      <span className="text-xs text-amber-400 font-medium">
+                                       {t("move")}
+                                      </span>
+                                      <div className="flex gap-1">
+                                        {[...Array(Math.ceil(property.gallery!.length / 5))].map((_, i) => (
+                                          <div
+                                            key={i}
+                                            className="w-1.5 h-1.5 rounded-full bg-amber-400/30"
+                                          />
+                                        ))}
+                                      </div>
+                                    </div>
+                                  </div>
+                                )}
+                              </div>
+                            </div>
+                          )}
+                        </div>
+
+                        {/* Hover Glow Effect */}
+                        <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
+                          <div className={`absolute inset-0 rounded-2xl bg-gradient-to-r ${
+                            isJabriya 
+                              ? 'from-amber-500/20 to-yellow-600/20' 
+                              : 'from-amber-500/10 to-amber-600/10'
+                          } blur-xl`} />
+                        </div>
                       </div>
                     </div>
                   );
@@ -599,6 +642,17 @@ const Properties: React.FC = () => {
           </div>
         </div>
       )}
+
+      {/* Custom CSS for hiding scrollbars */}
+      <style jsx>{`
+        .scrollbar-hide {
+          -ms-overflow-style: none;
+          scrollbar-width: none;
+        }
+        .scrollbar-hide::-webkit-scrollbar {
+          display: none;
+        }
+      `}</style>
     </section>
   );
 };

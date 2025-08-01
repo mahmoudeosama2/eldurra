@@ -90,9 +90,9 @@ export const translations = {
 'properties.mahbullah216.description': 'Mahbullah Property 216.',
 'properties.mahbullah216_2.title': 'Mahbullah 216',
 'properties.mahbullah216_2.description': 'Mahbullah Property 216.',
-'properties.mahbullahComplex.title': 'Mahbullah Properties 3',
+'properties.mahbullahComplex.title': 'Mahbullah Properties ',
 'properties.mahbullahComplex.description': 'Mahbullah Properties.',
-'properties.mahbullahComplex2.title': 'Mahbullah Properties 4',
+'properties.mahbullahComplex2.title': 'Mahbullah Properties ',
 'properties.mahbullahComplex2.description': 'Mahbullah Properties.',
 
    
@@ -159,7 +159,7 @@ export const translations = {
     'about.stats.experience': 'Years Experience',
     'about.stats.projects': 'Projects',
     'about.stats.locations': 'Locations',
-
+"contact.fullAddress2" : "Full Address",
     // Location
     'location.title': 'Our Locations',
     'location.description': 'Main office at Mazaya Towers, Kuwait.',
@@ -208,10 +208,14 @@ export const translations = {
   "folders.villas": "Residential Houses and Villas",
   "folders.previous": "Previously Managed Properties",
   "folders.construction": "Construction and Renovation Projects"
-  
-  },
+ ,"title.aljbria": "Al-Jabriya Hotel Project - One of our most important pioneering projects with a comprehensive gallery of more than 34 images and an explanatory video."
+,"move" : "Drag or use the arrows to navigate" },
+  ar: {  
+      "title.aljbria" : "مشروع فندق الجابرية - أحد أهم مشاريعنا الرائدة مع معرض شامل يضم أكثر من 34 صورة وفيديو توضيحي"
+    ,
 
-  ar: {  'categories.all': 'جميع العقارات','contact.fullAddress': 'الكويت - المرقاب - شارع خالد بن الوليد\nبرج مزايا 1 - الدور 11',
+    "move" : " اسحب أو استخدم الأزرار للتنقل",
+    'categories.all': 'جميع العقارات','contact.fullAddress': 'الكويت - المرقاب - شارع خالد بن الوليد\nبرج مزايا 1 - الدور 11',
   "folders.current": "العقارات الحالية",
   "folders.alrayaan": "مجمع الريان - السالمية",
   "folders.laplage": "مجمع البلاج - شارع الخليج العربي",
@@ -301,7 +305,7 @@ export const translations = {
     'properties.daralawad.title': 'فيلا دار الأعواد',
     'properties.daralawad.description': 'تطوير فيلل متميزة في منطقة سكنية راقية.',
     "coordinates": "📍 الإحداثيات: 29.3743° N, 47.9894° E",
-
+"contact.fullAddress2" : "العنوان الكامل",
     // الفيلل
     'properties.villa1.title': 'ديوان الرميثية قطعة 3',
     'properties.villa1.description': 'ديوان الرميثية قطعة 3.',
