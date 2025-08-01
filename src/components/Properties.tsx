@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { X } from 'lucide-react';
+import { X, MapPin } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 
 import jabriyaImg from '../assets/jabriya.jpg';
@@ -94,64 +94,74 @@ const Properties: React.FC = () => {
       image: alrayaan1,
       title: t('properties.alrayaan.title'),
       description: t('properties.alrayaan.description'),
-      category: 'complexes'
+      category: 'complexes',
+      location: 'https://maps.app.goo.gl/n7ZhwdxmRNbRTKe7A'
     },
     {
       image: alrayaan2,
       title: t('properties.alrayaan2.title'),
       description: t('properties.alrayaan2.description'),
-      category: 'complexes'
+      category: 'complexes',
+      location: 'https://maps.app.goo.gl/n7ZhwdxmRNbRTKe7A'
     },
     {
       image: alrayaan3,
       title: t('properties.alrayaan3.title'),
       description: t('properties.alrayaan3.description'),
-      category: 'complexes'
+      category: 'complexes',
+      location: 'https://maps.app.goo.gl/n7ZhwdxmRNbRTKe7A'
     },
 
     {
       image: lablag1,
       title: t('properties.lablag.title'),
       description: t('properties.lablag.description'),
-      category: 'complexes'
+      category: 'complexes',
+      location: 'https://maps.app.goo.gl/n3va1GHMwC6Q9AVdA'
     },
     {
       image: lablag2,
       title: t('properties.lablag2.title'),
       description: t('properties.lablag2.description'),
-      category: 'complexes'
+      category: 'complexes',
+      location: 'https://maps.app.goo.gl/n3va1GHMwC6Q9AVdA'
     },
 
     {
       image: mahbullah1,
       title: t('properties.mahbullah216.title'),
       description: t('properties.mahbullah216.description'),
-      category: 'residential'
+      category: 'residential',
+      location: 'https://maps.app.goo.gl/L6xEWegmmwMEsVcJ8'
     },
     {
       image: mahbullah2,
       title: t('properties.mahbullah216_2.title'),
       description: t('properties.mahbullah216_2.description'),
-      category: 'residential'
+      category: 'residential',
+      location: 'https://maps.app.goo.gl/L6xEWegmmwMEsVcJ8'
     },
     {
       image: mahbullahComplex1,
       title: t('properties.mahbullahComplex.title'),
       description: t('properties.mahbullahComplex.description'),
-      category: 'complexes'
+      category: 'complexes',
+      location: 'https://maps.app.goo.gl/SwHvnd4NYuNvPEJ68'
     },
     {
       image: mahbullahComplex2,
       title: t('properties.mahbullahComplex2.title'),
       description: t('properties.mahbullahComplex2.description'),
-      category: 'complexes'
+      category: 'complexes',
+      location: 'https://maps.app.goo.gl/SwHvnd4NYuNvPEJ68'
     },
 
     {
       image: four,
       title: t('properties.salmiya.title'),
       description: t('properties.salmiya.description'),
-      category: 'previous'
+      category: 'previous',
+      location: 'https://maps.app.goo.gl/jCBucykDyR7yVQ1a6'
     },
     {
       image: five,
@@ -169,31 +179,36 @@ const Properties: React.FC = () => {
       image: villa1,
       title: t('properties.villa1.title'),
       description: t('properties.villa1.description'),
-      category: 'residential'
+      category: 'residential',
+      location: 'https://maps.app.goo.gl/dFJEcctsmeZQeoMQ6'
     },
     {
       image: villa2,
       title: t('properties.villa2.title'),
       description: t('properties.villa2.description'),
-      category: 'residential'
+      category: 'residential',
+      location: 'https://maps.app.goo.gl/BgVPZLx9aEg8KLAP9'
     },
     {
       image: villa3,
       title: t('properties.villa3.title'),
       description: t('properties.villa3.description'),
-      category: 'residential'
+      category: 'residential',
+      location: 'https://maps.app.goo.gl/Qp7h81azX6HgxmYd6'
     },
     {
       image: villa4,
       title: t('properties.villa4.title'),
       description: t('properties.villa4.description'),
-      category: 'residential'
+      category: 'residential',
+      location: 'https://maps.app.goo.gl/Gohn47ahpbGXRF3UA'
     },
     {
       image: villa5,
       title: t('properties.villa5.title'),
       description: t('properties.villa5.description'),
-      category: 'residential'
+      category: 'residential',
+      location: 'https://maps.app.goo.gl/jCBucykDyR7yVQ1a6'
     },
     {
       image: daralawad,
@@ -279,25 +294,29 @@ const Properties: React.FC = () => {
       image: cartblanche1,
       title: t('properties.cartblanche.title'),
       description: t('properties.cartblanche.description'),
-      category: 'construction'
+      category: 'construction',
+      location: 'https://maps.app.goo.gl/aEMH9R7P6fSxadVPA'
     },
     {
       image: cartblanche2,
       title: t('properties.cartblanche2.title'),
       description: t('properties.cartblanche2.description'),
-      category: 'construction'
+      category: 'construction',
+      location: 'https://maps.app.goo.gl/njEfAtYKtNLeT8GG9'
     },
     {
       image: clinic1,
       title: t('properties.clinic.title'),
       description: t('properties.clinic.description'),
-      category: 'construction'
+      category: 'construction',
+      location: 'https://maps.app.goo.gl/4HxqXRS89skExD6P9'
     },
     {
       image: clinic2,
       title: t('properties.clinic2.title'),
       description: t('properties.clinic2.description'),
-      category: 'construction'
+      category: 'construction',
+      location: 'https://maps.app.goo.gl/4HxqXRS89skExD6P9'
     }
   ];
 
@@ -315,6 +334,10 @@ const Properties: React.FC = () => {
     residential: t('properties.categories.residential'),
     previous: t('properties.categories.previous'),
     construction: t('properties.categories.construction')
+  };
+
+  const handleLocationClick = (location: string) => {
+    window.open(location, '_blank');
   };
 
   return (
@@ -355,6 +378,16 @@ const Properties: React.FC = () => {
                       <p className="text-gray-300 mb-6 text-lg leading-relaxed">
                         {property.description}
                       </p>
+                      
+                      {property.location && (
+                        <button
+                          onClick={() => handleLocationClick(property.location!)}
+                          className="inline-flex items-center gap-2 bg-amber-500 hover:bg-amber-600 text-black font-semibold py-3 px-6 rounded-lg transition-colors duration-300 shadow-lg hover:shadow-xl"
+                        >
+                          <MapPin size={20} />
+                          <span>{t('properties.viewLocation') || 'عرض الموقع'}</span>
+                        </button>
+                      )}
                     </div>
                   </div>
                 ))}

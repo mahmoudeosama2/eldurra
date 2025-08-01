@@ -166,7 +166,7 @@ export const translations = {
     'location.projects': 'Project Areas',
     'location.projectsText': 'Jabriya, Mahboula, and other prime locations',
     'location.coordinates': 'Coordinates: 29.3743° N, 47.9894° E',
-
+    "properties.viewLocation": "View Location",
     // Contact
     'contact.title': 'Contact DURRA WORLD CO',
     'contact.description': 'Reach out to our team for inquiries or leasing.',
@@ -256,7 +256,7 @@ export const translations = {
     'properties.lablag.description': 'مجمع البلاج على شارع الخليج العربي.',
     'properties.lablag2.title': 'البلاج',
     'properties.lablag2.description': 'مجمع البلاج على شارع الخليج العربي.',
-
+"properties.viewLocation": "عرض الموقع",
     // عقارات المهبولة
     'properties.mahbullah216.title': 'المهبولة 216',
     'properties.mahbullah216.description': 'عقار المهبولة 216.',
