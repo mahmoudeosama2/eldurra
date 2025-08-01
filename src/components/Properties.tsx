@@ -78,17 +78,17 @@ const Properties: React.FC = () => {
           video: video, // Adding video property to Jabriya
           gallery: [five, sex, three, four] // Adding gallery images
         },
-        {
-          image: one,
-          title: t('properties.hotel.title'),
-          category: 'current',
-          featured: false
-        },
-        {
-          image: two,
-          title: t('properties.mall.title'),
-          category: 'current'
-        },
+        // {
+        //   image: one,
+        //   title: t('properties.hotel.title'),
+        //   category: 'current',
+        //   featured: false
+        // },
+        // {
+        //   image: two,
+        //   title: t('properties.mall.title'),
+        //   category: 'current'
+        // },
         {
           image: btbuilding,
           title: t('properties.btbuilding.title'),
