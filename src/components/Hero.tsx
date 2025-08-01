@@ -43,9 +43,7 @@ const Hero: React.FC = () => {
           )}
         </div>
 
-        <p className="text-xl md:text-2xl mb-8 text-gray-300">
-          {t('hero.subtitle')}
-        </p>
+       
         
         <button className="bg-amber-500 hover:bg-amber-600 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-xl">
           {t('hero.cta')}

@@ -34,8 +34,7 @@ const Location: React.FC = () => {
                   {t('location.headquarters')}
                 </h3>
                 <p className="text-gray-300">
-                  Dubai, United Arab Emirates
-                </p>
+  {t('contact.fullAddress')}           </p>
               </div>
               <div className="text-center">
                 <h3 className="text-xl font-semibold text-amber-400 mb-2">
@@ -72,14 +71,14 @@ const Location: React.FC = () => {
                 ></iframe>
               </div>
               <div className="mt-4 text-center">
-                <p className="text-gray-300 text-sm">
-                  📍 الإحداثيات: 29.3743° N, 47.9894° E
-                </p>
+               <p className="text-gray-300 text-sm">
+  {t('properties.coordinates')}
+</p>
                 <p className="text-gray-400 text-xs mt-1">
-                  الكويت - المرقاب - شارع خالد بن الوليد - برج مزايا 1
-                </p>
+
+  {t('contact.fullAddress')}           </p>
                 <p className="text-amber-400 text-xs mt-2 flex items-center justify-center space-x-1">
-                  <span>انقر للفتح في خرائط جوجل</span>
+                  <span>{t('location.openInMaps')}</span>
                   <ExternalLink size={12} />
                 </p>
               </div>

@@ -1,7 +1,8 @@
 import * as React from 'react';
-import { X, MapPin } from 'lucide-react';
+import { X, MapPin, Eye, ArrowRight, Star, Calendar, Building, Play } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 
+// Import all your actual images
 import jabriyaImg from '../assets/jabriya.jpg';
 import one from '../assets/1.jpg';
 import two from '../assets/2.jpg';
@@ -47,6 +48,7 @@ import salam2 from '../assets/عقارات سابقة تم ادارتها/الس
 import salam3 from '../assets/عقارات سابقة تم ادارتها/السلام مول 6.jpg';
 import salam4 from '../assets/عقارات سابقة تم ادارتها/السلام مول 7.jpg';
 import salam5 from '../assets/عقارات سابقة تم ادارتها/السلام مول 8.jpg';
+import video from '../assets/video/aljabraivideo.mp4';
 
 // Construction and Renovation Projects
 import cartblanche1 from '../assets/عقارات سابقة وحالية تم إنشائها و ترميمها/حولي كارت بلانش (2).jpg';
@@ -57,364 +59,543 @@ import clinic2 from '../assets/عقارات سابقة وحالية تم إنش�
 const Properties: React.FC = () => {
   const { t } = useLanguage();
   const [selectedImage, setSelectedImage] = React.useState<string | null>(null);
+  const [selectedVideo, setSelectedVideo] = React.useState<string | null>(null);
+  const [activeCategory, setActiveCategory] = React.useState<string>('all');
+  const [hoveredCard, setHoveredCard] = React.useState<string | null>(null);
 
-  const properties = [
+  // Grouped properties by folder/category with your actual images and original translations
+  const propertyGroups = [
     {
-      image: jabriyaImg,
-      title: t('properties.jabriya.title'),
-      description: t('properties.jabriya.description'),
-      category: 'current'
+      folderName: t("folders.current"),
+      folderNameEn: "Current Properties",
+      category: 'current',
+      properties: [
+        {
+          image: jabriyaImg,
+          title: t('properties.jabriya.title'),
+          category: 'current',
+          featured: false,
+          video: video, // Adding video property to Jabriya
+          gallery: [five, sex, three, four] // Adding gallery images
+        },
+        {
+          image: one,
+          title: t('properties.hotel.title'),
+          category: 'current',
+          featured: false
+        },
+        {
+          image: two,
+          title: t('properties.mall.title'),
+          category: 'current'
+        },
+        {
+          image: btbuilding,
+          title: t('properties.btbuilding.title'),
+          category: 'current'
+        },
+        {
+          image: daralawad,
+          title: t('properties.daralawad.title'),
+          category: 'current'
+        },
+        {
+          image: lolohyber,
+          title: t('properties.lolohyber.title'),
+          category: 'current'
+        },
+        {
+          image: lolohyber2,
+          title: t('properties.lolohyber2.title'),
+          category: 'current'
+        },
+        {
+          image: lolohyber3,
+          title: t('properties.lolohyber3.title'),
+          category: 'current'
+        },
+        {
+          image: altijari,
+          title: t('properties.altijari.title'),
+          category: 'current'
+        }
+      ]
     },
     {
-      image: one,
-      title: t('properties.hotel.title'),
-      description: t('properties.hotel.description'),
-      category: 'current'
-    },
-    {
-      image: two,
-      title: t('properties.mall.title'),
-      description: t('properties.mall.description'),
-      category: 'current'
-    },
-    {
-      image: three,
-      title: t('properties.portfolio.title'),
-      description: t('properties.portfolio.description'),
-      category: 'current'
-    },
-    {
-      image: btbuilding,
-      title: t('properties.btbuilding.title'),
-      description: t('properties.btbuilding.description'),
-      category: 'current'
-    },
-
-    {
-      image: alrayaan1,
-      title: t('properties.alrayaan.title'),
-      description: t('properties.alrayaan.description'),
+      folderName: t("folders.alrayaan"),
+      folderNameEn: "Alrayaan Complex - Salmiyah",
       category: 'complexes',
-      location: 'https://maps.app.goo.gl/n7ZhwdxmRNbRTKe7A'
+      properties: [
+        {
+          image: alrayaan1,
+          title: t('properties.alrayaan.title'),
+          category: 'complexes',
+          location: 'https://maps.app.goo.gl/n7ZhwdxmRNbRTKe7A',
+          featured: false
+        },
+        {
+          image: alrayaan2,
+          title: t('properties.alrayaan2.title'),
+          category: 'complexes',
+          location: 'https://maps.app.goo.gl/n7ZhwdxmRNbRTKe7A'
+        },
+        {
+          image: alrayaan3,
+          title: t('properties.alrayaan3.title'),
+          category: 'complexes',
+          location: 'https://maps.app.goo.gl/n7ZhwdxmRNbRTKe7A'
+        }
+      ]
     },
     {
-      image: alrayaan2,
-      title: t('properties.alrayaan2.title'),
-      description: t('properties.alrayaan2.description'),
+      folderName: t("folders.laplage"),
+      folderNameEn: "La Plage Complex - Arabian Gulf Street",
       category: 'complexes',
-      location: 'https://maps.app.goo.gl/n7ZhwdxmRNbRTKe7A'
+      properties: [
+        {
+          image: lablag1,
+          title: t('properties.lablag.title'),
+          category: 'complexes',
+          location: 'https://maps.app.goo.gl/n3va1GHMwC6Q9AVdA'
+        },
+        {
+          image: lablag2,
+          title: t('properties.lablag2.title'),
+          category: 'complexes',
+          location: 'https://maps.app.goo.gl/n3va1GHMwC6Q9AVdA'
+        }
+      ]
     },
     {
-      image: alrayaan3,
-      title: t('properties.alrayaan3.title'),
-      description: t('properties.alrayaan3.description'),
-      category: 'complexes',
-      location: 'https://maps.app.goo.gl/n7ZhwdxmRNbRTKe7A'
-    },
-
-    {
-      image: lablag1,
-      title: t('properties.lablag.title'),
-      description: t('properties.lablag.description'),
-      category: 'complexes',
-      location: 'https://maps.app.goo.gl/n3va1GHMwC6Q9AVdA'
-    },
-    {
-      image: lablag2,
-      title: t('properties.lablag2.title'),
-      description: t('properties.lablag2.description'),
-      category: 'complexes',
-      location: 'https://maps.app.goo.gl/n3va1GHMwC6Q9AVdA'
-    },
-
-    {
-      image: mahbullah1,
-      title: t('properties.mahbullah216.title'),
-      description: t('properties.mahbullah216.description'),
+      folderName: t("folders.mahbullahComplex"),
+      folderNameEn: "Mahbullah 216 Properties",
       category: 'residential',
-      location: 'https://maps.app.goo.gl/L6xEWegmmwMEsVcJ8'
+      properties: [
+        {
+          image: mahbullah1,
+          title: t('properties.mahbullah216.title'),
+          category: 'residential',
+          location: 'https://maps.app.goo.gl/L6xEWegmmwMEsVcJ8'
+        },
+        {
+          image: mahbullah2,
+          title: t('properties.mahbullah216_2.title'),
+          category: 'residential',
+          location: 'https://maps.app.goo.gl/L6xEWegmmwMEsVcJ8'
+        }
+      ]
     },
     {
-      image: mahbullah2,
-      title: t('properties.mahbullah216_2.title'),
-      description: t('properties.mahbullah216_2.description'),
+      folderName: t("folders.mahbullahComplex"),
+      folderNameEn: "Mahbullah Complex",
+      category: 'complexes',
+      properties: [
+        {
+          image: mahbullahComplex1,
+          title: t('properties.mahbullahComplex.title'),
+          category: 'complexes',
+          location: 'https://maps.app.goo.gl/SwHvnd4NYuNvPEJ68',
+          featured: false
+        },
+        {
+          image: mahbullahComplex2,
+          title: t('properties.mahbullahComplex2.title'),
+          category: 'complexes',
+          location: 'https://maps.app.goo.gl/SwHvnd4NYuNvPEJ68'
+        }
+      ]
+    },
+    {
+      folderName: t("folders.villas"),
+      folderNameEn: "Residential Houses and Villas",
       category: 'residential',
-      location: 'https://maps.app.goo.gl/L6xEWegmmwMEsVcJ8'
+      properties: [
+        {
+          image: villa1,
+          title: t('properties.villa1.title'),
+          category: 'residential',
+          location: 'https://maps.app.goo.gl/dFJEcctsmeZQeoMQ6'
+        },
+        {
+          image: villa2,
+          title: t('properties.villa2.title'),
+          category: 'residential',
+          location: 'https://maps.app.goo.gl/BgVPZLx9aEg8KLAP9'
+        },
+        {
+          image: villa3,
+          title: t('properties.villa3.title'),
+          category: 'residential',
+          location: 'https://maps.app.goo.gl/Qp7h81azX6HgxmYd6'
+        },
+        {
+          image: villa4,
+          title: t('properties.villa4.title'),
+          category: 'residential',
+          location: 'https://maps.app.goo.gl/Gohn47ahpbGXRF3UA'
+        },
+        {
+          image: villa5,
+          title: t('properties.villa5.title'),
+          category: 'residential',
+          location: 'https://maps.app.goo.gl/jCBucykDyR7yVQ1a6'
+        }
+      ]
     },
     {
-      image: mahbullahComplex1,
-      title: t('properties.mahbullahComplex.title'),
-      description: t('properties.mahbullahComplex.description'),
-      category: 'complexes',
-      location: 'https://maps.app.goo.gl/SwHvnd4NYuNvPEJ68'
-    },
-    {
-      image: mahbullahComplex2,
-      title: t('properties.mahbullahComplex2.title'),
-      description: t('properties.mahbullahComplex2.description'),
-      category: 'complexes',
-      location: 'https://maps.app.goo.gl/SwHvnd4NYuNvPEJ68'
-    },
-
-    {
-      image: four,
-      title: t('properties.salmiya.title'),
-      description: t('properties.salmiya.description'),
+      folderName: t("folders.previous"),
+      folderNameEn: "Previously Managed Properties",
       category: 'previous',
-      location: 'https://maps.app.goo.gl/jCBucykDyR7yVQ1a6'
+      properties: [
+        {
+          image: hamra1,
+          title: t('properties.hamra.title'),
+          category: 'previous'
+        },
+        {
+          image: hamra2,
+          title: t('properties.hamra2.title'),
+          category: 'previous'
+        },
+        {
+          image: hamra3,
+          title: t('properties.hamra3.title'),
+          category: 'previous'
+        },
+        {
+          image: salam1,
+          title: t('properties.salam1.title'),
+          category: 'previous'
+        },
+        {
+          image: salam2,
+          title: t('properties.salam2.title'),
+          category: 'previous'
+        },
+        {
+          image: salam3,
+          title: t('properties.salam3.title'),
+          category: 'previous'
+        },
+        {
+          image: salam4,
+          title: t('properties.salam4.title'),
+          category: 'previous'
+        },
+        {
+          image: salam5,
+          title: t('properties.salam5.title'),
+          category: 'previous'
+        }
+      ]
     },
     {
-      image: five,
-      title: t('properties.residential.title'),
-      description: t('properties.residential.description'),
-      category: 'residential'
-    },
-    {
-      image: sex,
-      title: t('properties.luxury.title'),
-      description: t('properties.luxury.description'),
-      category: 'residential'
-    },
-    {
-      image: villa1,
-      title: t('properties.villa1.title'),
-      description: t('properties.villa1.description'),
-      category: 'residential',
-      location: 'https://maps.app.goo.gl/dFJEcctsmeZQeoMQ6'
-    },
-    {
-      image: villa2,
-      title: t('properties.villa2.title'),
-      description: t('properties.villa2.description'),
-      category: 'residential',
-      location: 'https://maps.app.goo.gl/BgVPZLx9aEg8KLAP9'
-    },
-    {
-      image: villa3,
-      title: t('properties.villa3.title'),
-      description: t('properties.villa3.description'),
-      category: 'residential',
-      location: 'https://maps.app.goo.gl/Qp7h81azX6HgxmYd6'
-    },
-    {
-      image: villa4,
-      title: t('properties.villa4.title'),
-      description: t('properties.villa4.description'),
-      category: 'residential',
-      location: 'https://maps.app.goo.gl/Gohn47ahpbGXRF3UA'
-    },
-    {
-      image: villa5,
-      title: t('properties.villa5.title'),
-      description: t('properties.villa5.description'),
-      category: 'residential',
-      location: 'https://maps.app.goo.gl/jCBucykDyR7yVQ1a6'
-    },
-    {
-      image: daralawad,
-      title: t('properties.daralawad.title'),
-      description: t('properties.daralawad.description'),
-      category: 'residential'
-    },
-
-    {
-      image: lolohyber,
-      title: t('properties.lolohyber.title'),
-      description: t('properties.lolohyber.description'),
-      category: 'previous'
-    },
-    {
-      image: lolohyber2,
-      title: t('properties.lolohyber2.title'),
-      description: t('properties.lolohyber2.description'),
-      category: 'previous'
-    },
-    {
-      image: lolohyber3,
-      title: t('properties.lolohyber3.title'),
-      description: t('properties.lolohyber3.description'),
-      category: 'previous'
-    },
-    {
-      image: altijari,
-      title: t('properties.altijari.title'),
-      description: t('properties.altijari.description'),
-      category: 'previous'
-    },
-    {
-      image: hamra1,
-      title: t('properties.hamra.title'),
-      description: t('properties.hamra.description'),
-      category: 'previous'
-    },
-    {
-      image: hamra2,
-      title: t('properties.hamra2.title'),
-      description: t('properties.hamra2.description'),
-      category: 'previous'
-    },
-    {
-      image: hamra3,
-      title: t('properties.hamra3.title'),
-      description: t('properties.hamra3.description'),
-      category: 'previous'
-    },
-    {
-      image: salam1,
-      title: t('properties.salam1.title'),
-      description: t('properties.salam1.description'),
-      category: 'previous'
-    },
-    {
-      image: salam2,
-      title: t('properties.salam2.title'),
-      description: t('properties.salam2.description'),
-      category: 'previous'
-    },
-    {
-      image: salam3,
-      title: t('properties.salam3.title'),
-      description: t('properties.salam3.description'),
-      category: 'previous'
-    },
-    {
-      image: salam4,
-      title: t('properties.salam4.title'),
-      description: t('properties.salam4.description'),
-      category: 'previous'
-    },
-    {
-      image: salam5,
-      title: t('properties.salam5.title'),
-      description: t('properties.salam5.description'),
-      category: 'previous'
-    },
-
-    {
-      image: cartblanche1,
-      title: t('properties.cartblanche.title'),
-      description: t('properties.cartblanche.description'),
+      folderName: t("folders.construction"),
+      folderNameEn: "Construction and Renovation Projects",
       category: 'construction',
-      location: 'https://maps.app.goo.gl/aEMH9R7P6fSxadVPA'
-    },
-    {
-      image: cartblanche2,
-      title: t('properties.cartblanche2.title'),
-      description: t('properties.cartblanche2.description'),
-      category: 'construction',
-      location: 'https://maps.app.goo.gl/njEfAtYKtNLeT8GG9'
-    },
-    {
-      image: clinic1,
-      title: t('properties.clinic.title'),
-      description: t('properties.clinic.description'),
-      category: 'construction',
-      location: 'https://maps.app.goo.gl/4HxqXRS89skExD6P9'
-    },
-    {
-      image: clinic2,
-      title: t('properties.clinic2.title'),
-      description: t('properties.clinic2.description'),
-      category: 'construction',
-      location: 'https://maps.app.goo.gl/4HxqXRS89skExD6P9'
+      properties: [
+        {
+          image: cartblanche1,
+          title: t('properties.cartblanche.title'),
+          category: 'construction',
+          location: 'https://maps.app.goo.gl/aEMH9R7P6fSxadVPA'
+        },
+        {
+          image: cartblanche2,
+          title: t('properties.cartblanche2.title'),
+          category: 'construction',
+          location: 'https://maps.app.goo.gl/njEfAtYKtNLeT8GG9'
+        },
+        {
+          image: clinic1,
+          title: t('properties.clinic.title'),
+          category: 'construction',
+          location: 'https://maps.app.goo.gl/4HxqXRS89skExD6P9'
+        },
+        {
+          image: clinic2,
+          title: t('properties.clinic2.title'),
+          category: 'construction',
+          location: 'https://maps.app.goo.gl/4HxqXRS89skExD6P9'
+        }
+      ]
     }
   ];
 
-  const groupedProperties = {
-    current: properties.filter(p => p.category === 'current'),
-    complexes: properties.filter(p => p.category === 'complexes'),
-    residential: properties.filter(p => p.category === 'residential'),
-    previous: properties.filter(p => p.category === 'previous'),
-    construction: properties.filter(p => p.category === 'construction')
-  };
+  const categories = [
+    { id: 'all', name: t('categories.all'), icon: Building },
+    { id: 'current', name: t('categories.current'), icon: Star },
+    { id: 'complexes', name: t('categories.complexes'), icon: Building },
+    { id: 'residential', name: t('categories.residential'), icon: Building },
+    { id: 'previous', name: t('categories.previous'), icon: Calendar },
+    { id: 'construction', name: t('categories.construction'), icon: Building }
+  ];
 
-  const categoryTitles = {
-    current: t('properties.categories.current'),
-    complexes: t('properties.categories.complexes'),
-    residential: t('properties.categories.residential'),
-    previous: t('properties.categories.previous'),
-    construction: t('properties.categories.construction')
-  };
+  const filteredGroups = activeCategory === 'all' 
+    ? propertyGroups 
+    : propertyGroups.filter(group => group.category === activeCategory);
 
   const handleLocationClick = (location: string) => {
     window.open(location, '_blank');
   };
 
+  const getCategoryColor = (category: string) => {
+    const colors = {
+      current: 'from-emerald-500 to-teal-600',
+      complexes: 'from-blue-500 to-indigo-600',
+      residential: 'from-purple-500 to-pink-600',
+      previous: 'from-orange-500 to-red-600',
+      construction: 'from-yellow-500 to-amber-600'
+    };
+    return colors[category as keyof typeof colors] || 'from-gray-500 to-gray-600';
+  };
+
   return (
-    <section id="properties" className="py-16 bg-slate-900">
-      <div className="container mx-auto px-4">
-        <h2 className="text-3xl md:text-4xl font-bold text-center text-white mb-12">
-          {t('properties.title')}
-        </h2>
-
-        {Object.entries(groupedProperties).map(([category, categoryProperties]) => (
-          categoryProperties.length > 0 && (
-            <div key={category} className="mb-20">
-              <h3 className="text-2xl md:text-3xl font-bold text-center text-amber-400 mb-12">
-                {categoryTitles[category as keyof typeof categoryTitles]}
-              </h3>
-              
-              <div className="space-y-16">
-                {categoryProperties.map((property, index) => (
-                  <div
-                    key={`${category}-${index}`}
-                    className={`flex flex-col lg:flex-row items-center gap-12 ${
-                      index % 2 === 1 ? 'lg:flex-row-reverse' : ''
-                    }`}
-                  >
-                    <div className="lg:w-1/2">
-                      <img
-                        src={property.image}
-                        alt={property.title}
-                        className="w-full h-96 object-cover rounded-lg shadow-2xl cursor-pointer hover:opacity-90 transition-opacity"
-                        onClick={() => setSelectedImage(property.image)}
-                      />
-                    </div>
-
-                    <div className="lg:w-1/2 text-white">
-                      <h4 className="text-2xl md:text-3xl font-bold mb-4 text-amber-400">
-                        {property.title}
-                      </h4>
-                      <p className="text-gray-300 mb-6 text-lg leading-relaxed">
-                        {property.description}
-                      </p>
-                      
-                      {property.location && (
-                        <button
-                          onClick={() => handleLocationClick(property.location!)}
-                          className="inline-flex items-center gap-2 bg-amber-500 hover:bg-amber-600 text-black font-semibold py-3 px-6 rounded-lg transition-colors duration-300 shadow-lg hover:shadow-xl"
-                        >
-                          <MapPin size={20} />
-                          <span>{t('properties.viewLocation') || 'عرض الموقع'}</span>
-                        </button>
-                      )}
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          )
-        ))}
+    <section id="properties" className="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 relative overflow-hidden">
+      {/* Background Pattern */}
+      <div className="absolute inset-0 opacity-5">
+        <div className="absolute inset-0" style={{
+          backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+        }} />
       </div>
 
+      <div className="container mx-auto px-4 relative z-10">
+        {/* Header */}
+        <div className="text-center mb-16">
+       
+          <h2 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-white via-amber-100 to-amber-200 bg-clip-text text-transparent mb-6">
+            {t('properties.title')}
+          </h2>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+            {t('exploreDescription')}
+          </p>
+        </div>
+
+        {/* Category Filter */}
+        <div className="flex flex-wrap justify-center gap-4 mb-16">
+          {categories.map((category) => {
+            const Icon = category.icon;
+            return (
+              <button
+                key={category.id}
+                onClick={() => setActiveCategory(category.id)}
+                className={`group relative overflow-hidden px-6 py-3 rounded-full font-medium transition-all duration-300 ${
+                  activeCategory === category.id
+                    ? 'bg-gradient-to-r from-amber-500 to-amber-600 text-black shadow-lg shadow-amber-500/25'
+                    : 'bg-slate-800/50 text-gray-300 hover:bg-slate-700/50 border border-slate-600/50'
+                }`}
+              >
+                <div className="flex items-center gap-2 relative z-10">
+                  <Icon size={18} />
+                  <span>{category.name}</span>
+                </div>
+                {activeCategory === category.id && (
+                  <div className="absolute inset-0 bg-gradient-to-r from-amber-400/20 to-amber-600/20 animate-pulse" />
+                )}
+              </button>
+            );
+          })}
+        </div>
+
+        {/* Properties Groups */}
+        <div className="space-y-16">
+          {filteredGroups.map((group, groupIndex) => (
+            <div key={groupIndex} className="space-y-8">
+              {/* Group Header - Updated with single amber color */}
+              <div className="text-center">
+                <div className="inline-flex items-center gap-3 bg-amber-500/20 backdrop-blur-sm border border-amber-500/30 rounded-full px-8 py-4 mb-4">
+                  <Building className="w-6 h-6 text-amber-400" />
+                  <h3 className="text-2xl md:text-3xl font-bold text-amber-400">
+                    {group.folderName}
+                  </h3>
+                </div>
+                <div className="w-24 h-1 bg-gradient-to-r from-amber-500 to-amber-600 mx-auto rounded-full"></div>
+              </div>
+
+              {/* Properties Grid for this group */}
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+                {group.properties.map((property, index) => {
+                  const cardId = `${group.category}-${groupIndex}-${index}`;
+                  const isHovered = hoveredCard === cardId;
+                  
+                  return (
+                    <div
+                      key={cardId}
+                      className={`group relative bg-gradient-to-br from-slate-800/80 to-slate-900/80 backdrop-blur-sm rounded-2xl overflow-hidden border border-slate-700/50 transition-all duration-500 hover:border-amber-500/50 ${
+                        property.featured ? 'ring-2 ring-amber-500/20' : ''
+                      } ${isHovered ? 'transform scale-105 shadow-2xl shadow-amber-500/10' : 'hover:transform hover:scale-102'}`}
+                      onMouseEnter={() => setHoveredCard(cardId)}
+                      onMouseLeave={() => setHoveredCard(null)}
+                    >
+                      {/* Featured Badge */}
+                      {property.featured && (
+                        <div className="absolute top-4 left-4 z-20">
+                          <div className="flex items-center gap-1 bg-gradient-to-r from-amber-500 to-amber-600 text-black px-3 py-1 rounded-full text-sm font-bold shadow-lg">
+                            <Star size={14} fill="currentColor" />
+                            <span>مميز</span>
+                          </div>
+                        </div>
+                      )}
+
+                      {/* Video Badge */}
+                      {property.video && (
+                        <div className="absolute top-4 right-4 z-20">
+                          <div className="flex items-center gap-1 bg-gradient-to-r from-red-500 to-red-600 text-white px-3 py-1 rounded-full text-sm font-bold shadow-lg">
+                            <Play size={14} fill="currentColor" />
+                            <span>{t('video')}</span>
+                          </div>
+                        </div>
+                      )}
+
+                      {/* Image Container */}
+                      <div className="relative overflow-hidden h-64">
+                        <img
+                          src={property.image}
+                          alt={property.title}
+                          className="w-full h-full object-cover transition-all duration-700 group-hover:scale-110"
+                        />
+                        
+                        {/* Gradient Overlay */}
+                        <div className={`absolute inset-0 bg-gradient-to-t ${getCategoryColor(property.category)} opacity-0 group-hover:opacity-20 transition-opacity duration-500`} />
+                        
+                        {/* Action Buttons Overlay */}
+                        <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-all duration-300 flex items-center justify-center">
+                          <div className="flex gap-3 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                            <button
+                              onClick={() => setSelectedImage(property.image)}
+                              className="bg-white/90 hover:bg-white text-black p-3 rounded-full transition-all duration-200 shadow-lg hover:shadow-xl hover:scale-110"
+                            >
+                              <Eye size={20} />
+                            </button>
+                            {property.video && (
+                              <button
+                                onClick={() => setSelectedVideo(property.video!)}
+                                className="bg-red-500 hover:bg-red-600 text-white p-3 rounded-full transition-all duration-200 shadow-lg hover:shadow-xl hover:scale-110"
+                              >
+                                <Play size={20} />
+                              </button>
+                            )}
+                            {property.location && (
+                              <button
+                                onClick={() => handleLocationClick(property.location!)}
+                                className="bg-amber-500 hover:bg-amber-600 text-black p-3 rounded-full transition-all duration-200 shadow-lg hover:shadow-xl hover:scale-110"
+                              >
+                                <MapPin size={20} />
+                              </button>
+                            )}
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* Content */}
+                      <div className="p-6">
+                        {/* Category Tag */}
+                        <div className="mb-3">
+                          <span className={`inline-block px-3 py-1 rounded-full text-xs font-semibold bg-gradient-to-r ${getCategoryColor(property.category)} text-white`}>
+                            {categories.find(c => c.id === property.category)?.name}
+                          </span>
+                        </div>
+
+                        <h4 className="text-xl font-bold text-white mb-3 line-clamp-2 group-hover:text-amber-400 transition-colors duration-300">
+                          {property.title}
+                        </h4>
+                        {/* Gallery thumbnails */}
+                        {property.gallery && property.gallery.length > 0 && (
+                          <div className="mt-4">
+                            <div className="flex items-center gap-2 mb-3">
+                              <div className="w-4 h-4 bg-gradient-to-r from-amber-500 to-amber-600 rounded-full"></div>
+                              <span className="text-sm text-gray-400 font-medium">{t("gallery")}</span>
+                            </div>
+                            <div className="grid grid-cols-4 gap-2">
+                              {property.gallery.map((galleryImg, galleryIndex) => (
+                                <div
+                                  key={galleryIndex}
+                                  className="relative aspect-square rounded-lg overflow-hidden cursor-pointer group/thumb hover:ring-2 hover:ring-amber-500/50 transition-all duration-200"
+                                  onClick={() => setSelectedImage(galleryImg)}
+                                >
+                                  <img
+                                    src={galleryImg}
+                                    alt={`${property.title} - صورة ${galleryIndex + 1}`}
+                                    className="w-full h-full object-cover transition-transform duration-200 group-hover/thumb:scale-110"
+                                  />
+                                  <div className="absolute inset-0 bg-black/20 opacity-0 group-hover/thumb:opacity-100 transition-opacity duration-200 flex items-center justify-center">
+                                    <Eye size={16} className="text-white" />
+                                  </div>
+                                </div>
+                              ))}
+                            </div>
+                          </div>
+                        )}
+                        
+                      </div>
+
+                      {/* Hover Glow Effect */}
+                      <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
+                        <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-amber-500/10 to-amber-600/10 blur-xl" />
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Empty State */}
+        {filteredGroups.length === 0 && (
+          <div className="text-center py-20">
+            <Building className="w-16 h-16 text-gray-600 mx-auto mb-4" />
+            <h3 className="text-xl font-semibold text-gray-400 mb-2">لا توجد عقارات في هذه الفئة</h3>
+            <p className="text-gray-500">جرب تصفح فئة أخرى لعرض المزيد من العقارات</p>
+          </div>
+        )}
+      </div>
+
+      {/* Modal for full-size image */}
       {selectedImage && (
         <div 
-          className="fixed inset-0 bg-black bg-opacity-90 flex items-center justify-center z-50 p-4"
+          className="fixed inset-0 bg-black/95 backdrop-blur-sm flex items-center justify-center z-50 p-4"
           onClick={() => setSelectedImage(null)}
         >
-          <div className="relative max-w-7xl max-h-full">
+          <div className="relative max-w-7xl max-h-full animate-in zoom-in-95 duration-300">
             <button
               onClick={() => setSelectedImage(null)}
-              className="absolute top-4 right-4 text-white bg-black bg-opacity-50 rounded-full p-2 hover:bg-opacity-70 transition-colors z-10"
+              className="absolute top-4 right-4 text-white bg-black/70 hover:bg-black/90 rounded-full p-3 transition-all duration-200 z-10 shadow-2xl hover:scale-110"
             >
               <X size={24} />
             </button>
             <img
               src={selectedImage}
               alt="عرض كامل"
-              className="max-w-full max-h-full object-contain"
+              className="max-w-full max-h-full object-contain rounded-2xl shadow-2xl"
               onClick={(e) => e.stopPropagation()}
             />
+          </div>
+        </div>
+      )}
+
+      {/* Modal for video */}
+      {selectedVideo && (
+        <div 
+          className="fixed inset-0 bg-black/95 backdrop-blur-sm flex items-center justify-center z-50 p-4"
+          onClick={() => setSelectedVideo(null)}
+        >
+          <div className="relative max-w-7xl max-h-full animate-in zoom-in-95 duration-300">
+            <button
+              onClick={() => setSelectedVideo(null)}
+              className="absolute top-4 right-4 text-white bg-black/70 hover:bg-black/90 rounded-full p-3 transition-all duration-200 z-10 shadow-2xl hover:scale-110"
+            >
+              <X size={24} />
+            </button>
+            <video
+              src={selectedVideo}
+              controls
+              autoPlay
+              className="max-w-full max-h-full rounded-2xl shadow-2xl"
+              onClick={(e) => e.stopPropagation()}
+            >
+              متصفحك لا يدعم تشغيل الفيديو
+            </video>
           </div>
         </div>
       )}

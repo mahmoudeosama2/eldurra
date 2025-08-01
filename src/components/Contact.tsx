@@ -46,10 +46,10 @@ const Contact: React.FC = () => {
               <h3 className="text-xl font-semibold text-white mb-2">
                 {t('contact.address')}
               </h3>
-              <p className="text-white/90 text-sm">
-                الكويت - المرقاب - شارع خالد بن الوليد<br />
-                برج مزايا 1 - الدور 11 - مكتب رقم: ب 1
-              </p>
+           <p className="text-white/90 text-sm whitespace-pre-line">
+  {t('contact.fullAddress')}
+</p>
+
             </div>
           </div>
           

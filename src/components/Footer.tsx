@@ -11,15 +11,15 @@ const Footer: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="md:col-span-2">
             <h3 className="text-2xl font-bold mb-4">
-              {language === 'ar' ? 'شركة درة العالم' : 'DURRA WORLD CO'}
+              {language === 'ar' ? 'شركة درة العالم' : 'WORLD DURRA CO'}
             </h3>
             <p className="text-gray-300 mb-6">
               {t('footer.description')}
             </p>
             <div className="flex space-x-4">
-              <a href="https://www.facebook.com/mahmoudeosama2" target="_blank" rel="noopener noreferrer" className="bg-slate-800 hover:bg-amber-500 p-3 rounded-full transition-colors">
+              {/* <a href="https://www.facebook.com/mahmoudeosama2" target="_blank" rel="noopener noreferrer" className="bg-slate-800 hover:bg-amber-500 p-3 rounded-full transition-colors">
                 <Facebook size={20} />
-              </a>
+              </a> */}
               <a href="https://www.instagram.com/eldurraworld/" target="_blank" rel="noopener noreferrer" className="bg-slate-800 hover:bg-amber-500 p-3 rounded-full transition-colors">
                 <Instagram size={20} />
               </a>
@@ -39,13 +39,13 @@ const Footer: React.FC = () => {
               <div>
                 <h4 className="text-lg font-semibold mb-2 text-amber-400">{t('footer.company')}</h4>
                 <p className="text-gray-300 text-sm">
-                  {language === 'ar' ? 'شركة درة العالم' : 'DURRA WORLD CO'}
+                  {language === 'ar' ? 'شركة درة العالم' : 'WORLD DURRA CO'}
                 </p>
-                <p className="text-gray-300 text-sm">
+                {/* <p className="text-gray-300 text-sm">
                   {language === 'ar' ? 'شركة حامد عوض الدولية' : 'Hamed Awadh International'}
-                </p>
+                </p> */}
                 <p className="text-gray-300 text-sm">
-                  {language === 'ar' ? 'شركة الإنشاءات المتميزة' : 'Premium Construction Co'}
+                  {language === 'ar' ? 'شركة درة الخليج' : 'Gulf Durra Co'}
                 </p>
               </div>
               <div>
@@ -67,9 +67,9 @@ const Footer: React.FC = () => {
                 {t('footer.phoneNumbers')}
               </h5>
               <ul className="space-y-1 text-gray-300 text-sm">
-                <li>22269915 - {t('footer.hamedAwadCo')}</li>
-                <li>22269916 - {t('footer.worldDurraCo')}</li>
-                <li>22269917 - {t('footer.gulfDurraCo')}</li>
+                <li>22269915 </li>
+                <li>22269916 </li>
+                <li>22269917 </li>
               </ul>
             </div>
 
@@ -80,16 +80,7 @@ const Footer: React.FC = () => {
                 {t('footer.emails')}
               </h5>
               <ul className="space-y-1 text-gray-300 text-sm">
-                <li>
-                  <a href="mailto:Hesham@hamedawad-int.com" className="hover:text-amber-400 transition-colors">
-                    Hesham@hamedawad-int.com
-                  </a>
-                </li>
-                <li>
-                  <a href="mailto:Aaldhahi@hamedawad-int.com" className="hover:text-amber-400 transition-colors">
-                    Aaldhahi@hamedawad-int.com
-                  </a>
-                </li>
+
                 <li>
                   <a href="mailto:durraworld.co@gmail.com" className="hover:text-amber-400 transition-colors">
                     durraworld.co@gmail.com
@@ -103,17 +94,14 @@ const Footer: React.FC = () => {
               <h5 className="text-amber-400 font-medium mb-2">{t('footer.address')}</h5>
               <ul className="space-y-1 text-gray-300 text-sm">
                 <li>{t('footer.country')}</li>
-                <li>{t('footer.area')}</li>
-                <li>{t('footer.street')}</li>
-                <li>{t('footer.building')}</li>
-                <li>{t('footer.office')}</li>
+
               </ul>
             </div>
           </div>
         </div>
                  
         <div className="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
-          <p>&copy; 2025 {language === 'ar' ? 'شركة درة العالم' : 'DURRA WORLD CO'}. {t('footer.rights')}</p>
+          <p>&copy; 2025 {language === 'ar' ? 'شركة درة العالم' : 'WORLD DURRA CO'}. {t('footer.rights')}</p>
         </div>
       </div>
     </footer>

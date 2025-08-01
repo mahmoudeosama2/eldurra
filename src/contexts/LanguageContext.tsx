@@ -18,9 +18,9 @@ export const translations = {
     'nav.about': 'About',
     'nav.location': 'Location',
     'nav.contact': 'Contact',
-
+"exploreDescription": "Explore our distinguished collection of luxury properties and exceptional projects that reflect our vision in real estate development",
     // Hero Section
-    'hero.title': 'DURRA WORLD CO',
+    'hero.title': 'WORLD DURRA CO',
     'hero.subtitle': 'For Management and Leasing of Real Estate',
     'hero.cta': 'Contact Us',
 
@@ -39,20 +39,20 @@ export const translations = {
 
     // Property Categories
     'properties.categories.current': 'Current Main Projects',
-    'properties.categories.complexes': 'Commercial Complexes',
+    'properties.categories.complexes': 'Alraian Complexes',
     'properties.categories.residential': 'Residential Properties',
     'properties.categories.previous': 'Previously Managed Properties',
     'properties.categories.construction': 'Construction & Renovation Projects',
-
+"video": "Video",
     // Current Projects
     'properties.jabriya.title': 'JABRIYA Hotel',
     'properties.jabriya.description': 'Premium hotel facility located in Jabriya area.',
 
-    'properties.hotel.title': 'Hotel Project (Under Construction)',
+    'properties.hotel.title': 'Hotel Project',
     'properties.hotel.description': 'A hotel project under development. Location: Jabriya. Expected to include hospitality services and strategic positioning with modern amenities.',
 
     'properties.mall.title': 'Commercial Complex',
-    'properties.mall.description': 'A multi-purpose complex under the management of Durra World Company.',
+    'properties.mall.description': 'A multi-purpose complex under the management of WORLD DURRA COmpany.',
 
     'properties.portfolio.title': 'Real Estate Portfolio',
     'properties.portfolio.description': 'Various projects managed or leased across Kuwait.',
@@ -103,12 +103,12 @@ export const translations = {
     'properties.luxury.description': 'Premium villa development with luxury amenities and modern design.',
     'properties.daralawad.title': 'Dar Al Awadh Villa',
     'properties.daralawad.description': 'Premium villa development in prime residential area.',
-
+    "gallery": "Gallery",
    
 
     // Previous Projects
     'properties.salmiya.title': 'Previous Projects',
-    'properties.salmiya.description': 'Projects previously managed including La Plage, Al Hamra Complex, Al Rayan, and Salam Mall management period. Management handled personally by Hamed Awadh before Durra World Company establishment.',
+    'properties.salmiya.description': 'Projects previously managed including La Plage, Al Hamra Complex, Al Rayan, and Salam Mall management period. Management handled personally by Hamed Awadh before WORLD DURRA COmpany establishment.',
 
     'properties.lolohyber.title': 'Salam Mall Management Period',
     'properties.lolohyber.description': 'Commercial entities including Lulu Hypermarket and Al Tijari Bank managed during Salam Mall administration period.',
@@ -129,6 +129,7 @@ export const translations = {
 'properties.hamra2.description': 'Al Hamra Residence.',
 'properties.hamra3.title': 'Al Hamra Residence',
 'properties.hamra3.description': 'Al Hamra Residence.',
+"location.openInMaps": "Open in Google Maps",    "coordinates": "📍 Coordinates: 29.3743° N, 47.9894° E",
 
 // Salam Mall
 'properties.salam1.title': 'Salam Mall 2',
@@ -153,7 +154,7 @@ export const translations = {
 'properties.clinic2.description': 'Shuab Al Bahri Medical Clinics.',
 
     // About
-    'about.title': 'About DURRA WORLD CO',
+    'about.title': 'About WORLD DURRA CO',
     'about.description': 'A real estate company specialized in leasing and management of residential and commercial properties in Kuwait.',
     'about.stats.experience': 'Years Experience',
     'about.stats.projects': 'Projects',
@@ -168,7 +169,7 @@ export const translations = {
     'location.coordinates': 'Coordinates: 29.3743° N, 47.9894° E',
     "properties.viewLocation": "View Location",
     // Contact
-    'contact.title': 'Contact DURRA WORLD CO',
+    'contact.title': 'Contact WORLD DURRA CO',
     'contact.description': 'Reach out to our team for inquiries or leasing.',
     'contact.phone': 'Phone',
     'contact.email': 'Email',
@@ -176,7 +177,7 @@ export const translations = {
     'contact.cta': 'Get in Touch',
 
     // Footer
-    'footer.description': 'DURRA WORLD CO – Real Estate Management and Leasing.',
+    'footer.description': 'WORLD DURRA CO – Real Estate Management and Leasing.',
     'footer.quickLinks': 'Quick Links',
     'footer.contact': 'Contact Info',
     'footer.rights': 'All rights reserved.',
@@ -190,15 +191,40 @@ export const translations = {
     'footer.hamedAwadCo': 'Hamed Awad Co',
     'footer.worldDurraCo': 'World Durra Co',
     'footer.gulfDurraCo': 'Gulf Durra Co',
-    'footer.country': 'Kuwait - Mubarek',
-    'footer.area': 'Mubarek Area',
+    'footer.country':"Kuwait - Al-Mirqab - Khaled Bin Al-Waleed Street - Mazaya Tower 1 - 11th Floor" , 
+     'footer.area': 'Mubarek Area',
     'footer.street': 'Khalid Ibn Al-Walid Street',
     'footer.building': 'Mazaya Tower 1 - Floor 11',
-    'footer.office': 'Office No: B1',
-
+  'categories.all': 'All Properties',
+  'categories.current': 'Current Properties',
+  'categories.complexes': 'Complexes',
+  'categories.residential': 'Residential',
+  'categories.previous': 'Previous Properties',
+  'categories.construction': 'Construction','contact.fullAddress': 'Kuwait - Al-Mirqab - Khalid Bin Al-Waleed Street\nMazaya Tower 1 - 11th Floor',  "folders.current": "Current Properties",
+  "folders.alrayaan": "Alrayaan Complex - Salmiyah",
+  "folders.laplage": "La Plage Complex - Arabian Gulf Street",
+  "folders.mahbullah216": "Mahbullah 216 Properties",
+  "folders.mahbullahComplex": "Mahbullah Complex",
+  "folders.villas": "Residential Houses and Villas",
+  "folders.previous": "Previously Managed Properties",
+  "folders.construction": "Construction and Renovation Projects"
+  
   },
 
-  ar: {
+  ar: {  'categories.all': 'جميع العقارات','contact.fullAddress': 'الكويت - المرقاب - شارع خالد بن الوليد\nبرج مزايا 1 - الدور 11',
+  "folders.current": "العقارات الحالية",
+  "folders.alrayaan": "مجمع الريان - السالمية",
+  "folders.laplage": "مجمع البلاج - شارع الخليج العربي",
+  "folders.mahbullah216": "عقارات المهبولة 216",
+  "folders.mahbullahComplex": "مجمع المهبولة",
+  "folders.villas": "بيوت وفلل سكنية",
+  "folders.previous": "عقارات سابقة تم إدارتها",
+  "folders.construction": "عقارات تم إنشاؤها وترميمها",
+  'categories.current': 'العقارات الحالية',
+  'categories.complexes': 'المجمعات',
+  'categories.residential': 'السكنية',
+  'categories.previous': 'السابقة',
+  'categories.construction': 'الإنشاءات',
     'nav.home': 'الرئيسية',
     'nav.properties': 'المشاريع',
     'nav.about': 'من نحن',
@@ -208,7 +234,7 @@ export const translations = {
     'hero.title': 'شركة درة العالم',
     'hero.subtitle': 'لإدارة وتأجير العقارات',
     'hero.cta': 'تواصل معنا',
-
+  "exploreDescription":"استكشف مجموعتنا المتميزة من العقارات الفاخرة والمشاريع الاستثنائية التي تعكس رؤيتنا في التطوير العقاري",
     'features.security.title': 'إدارة احترافية',
     'features.security.description': 'إدارة عقارية بمعايير عالية.',
     'features.quality.title': 'مشاريع استراتيجية',
@@ -217,7 +243,7 @@ export const translations = {
     'features.service.description': 'تطوير مشاريع سكنية وتجارية.',
     'features.location.title': 'مواقع متميزة',
     'features.location.description': 'في أهم مناطق الكويت.',
-
+"location.openInMaps": "انقر للفتح في خرائط جوجل",
     'properties.title': 'مكونات المشروع',
 
     // تصنيفات العقارات
@@ -231,7 +257,7 @@ export const translations = {
     'properties.jabriya.title': 'فندق الجابرية',
     'properties.jabriya.description': 'منشأة فندقية متميزة تقع في منطقة الجابرية.',
 
-    'properties.hotel.title': 'مشروع فندقي (قيد الإنشاء)',
+    'properties.hotel.title': 'مشروع فندقي )',
     'properties.hotel.description': 'مشروع فندقي قيد التطوير، الموقع: الجابرية. من المتوقع أن يضم خدمات ضيافة وموقع استراتيجي مع مرافق حديثة.',
 
     'properties.mall.title': 'مجمع تجاري',
@@ -274,6 +300,7 @@ export const translations = {
     'properties.luxury.description': 'تطوير فيلل متميزة بمرافق فاخرة وتصميم حديث.',
     'properties.daralawad.title': 'فيلا دار الأعواد',
     'properties.daralawad.description': 'تطوير فيلل متميزة في منطقة سكنية راقية.',
+    "coordinates": "📍 الإحداثيات: 29.3743° N, 47.9894° E",
 
     // الفيلل
     'properties.villa1.title': 'ديوان الرميثية قطعة 3',
@@ -352,25 +379,24 @@ export const translations = {
     'contact.email': 'البريد الإلكتروني',
     'contact.address': 'العنوان',
     'contact.cta': 'تواصل الآن',
-
+"video": "فيديو",
     'footer.description': 'شركة درة العالم – لإدارة وتأجير العقارات.',
     'footer.quickLinks': 'روابط سريعة',
     'footer.contact': 'معلومات الاتصال',
     'footer.rights': 'جميع الحقوق محفوظة.',
     'footer.company': 'الشركات',
     'footer.services': 'الخدمات',
- 
+ "gallery": "معرض الصور",
     'footer.phoneNumbers': 'أرقام الهواتف',
     'footer.emails': 'عناوين البريد الإلكتروني',
     'footer.address': 'العنوان',
     'footer.hamedAwadCo': 'شركة حامد عوض',
     'footer.worldDurraCo': 'شركة درة العالم',
     'footer.gulfDurraCo': 'شركة درة الخليج',
-    'footer.country': 'الكويت - المرقاب',
+    'footer.country': "الكويت - المرقاب - شارع خالد بن الوليد - برج مزايا 1 - الدور 11",
     'footer.area': 'منطقة المرقاب',
     'footer.street': 'شارع خالد بن الوليد',
     'footer.building': 'برج مزايا 1 - الدور 11',
-    'footer.office': 'مكتب رقم: ب 1'
   }
 };
 
