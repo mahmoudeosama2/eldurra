@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Phone, Mail, MapPin } from 'lucide-react';
+import { Phone, Mail } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 
 const Contact: React.FC = () => {
@@ -12,12 +12,12 @@ const Contact: React.FC = () => {
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-8">
             {t('contact.title')}
           </h2>
-          
+
           <p className="text-white/90 text-lg mb-12 max-w-2xl mx-auto">
             {t('contact.description')}
           </p>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 justify-center items-start mb-12 ml-auto mr-auto md:mr-20">
             <div className="text-center">
               <div className="inline-flex items-center justify-center w-16 h-16 bg-white/20 rounded-full mb-4">
                 <Phone size={24} className="text-white" />
@@ -29,7 +29,7 @@ const Contact: React.FC = () => {
               <p className="text-white/90">+965 2226 9916</p>
               <p className="text-white/90">+965 2226 9917</p>
             </div>
-            
+
             <div className="text-center">
               <div className="inline-flex items-center justify-center w-16 h-16 bg-white/20 rounded-full mb-4">
                 <Mail size={24} className="text-white" />
@@ -39,11 +39,7 @@ const Contact: React.FC = () => {
               </h3>
               <p className="text-white/90">durraworld.co@gmail.com</p>
             </div>
-            
-           
           </div>
-          
-        
         </div>
       </div>
     </section>
