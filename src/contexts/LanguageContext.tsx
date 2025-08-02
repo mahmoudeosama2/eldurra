@@ -45,7 +45,7 @@ export const translations = {
     'properties.categories.construction': 'Construction & Renovation Projects',
 "video": "Video",
     // Current Projects
-    'properties.jabriya.title': 'JABRIYA Hotel',
+    'properties.jabriya.title': 'Jabriya Mall & Hotel',
     'properties.jabriya.description': 'Premium hotel facility located in Jabriya area.',
 
     'properties.hotel.title': 'Hotel Project',
@@ -130,6 +130,7 @@ export const translations = {
 'properties.hamra3.title': 'Al Hamra Residence',
 'properties.hamra3.description': 'Al Hamra Residence.',
 "location.openInMaps": "Open in Google Maps",    "coordinates": "📍 Coordinates: 29.3743° N, 47.9894° E",
+  "folders.bnidalqar": "Bnid Al-Qar Complex",
 
 // Salam Mall
 'properties.salam1.title': 'Al Salam Mall',
@@ -165,7 +166,7 @@ export const translations = {
     'location.description': 'Main office at Mazaya Towers, Kuwait.',
     'location.headquarters': 'Main Office – Kuwait',
     'location.projects': 'Project Areas',
-    'location.projectsText': 'Jabriya, Mahboula, and other prime locations',
+    'location.projectsText': 'Jabriyah, Salmiyah, Hawalli , rumaithya, and other prime locations.',
     'location.coordinates': 'Coordinates: 29.3743° N, 47.9894° E',
     "properties.viewLocation": "View Location",
     // Contact
@@ -204,7 +205,7 @@ export const translations = {
   "folders.alrayaan": "Alrayaan Complex  Salmiyah",
   "folders.laplage": "La Blage Complex Arabian Gulf Street",
   "folders.mahbullah216": "Mahbullah 216 Properties",
-  "folders.mahbullahComplex": "Mahbullah 216",
+  "folders.mahbullahComplex": "Mahbullah Complex",
   "folders.villas": "Residential Houses and Villas",
   "folders.previous": "Previously Managed Properties",
   "folders.construction": "Construction and Renovation Projects"
@@ -220,7 +221,7 @@ export const translations = {
   "folders.alrayaan": "مجمع الريان  السالمية",
   "folders.laplage": "مجمع البلاج شارع الخليج العربي",
   "folders.mahbullah216": "عقارات المهبولة 216",
-  "folders.mahbullahComplex": " المهبولة216 ",
+  "folders.mahbullahComplex": "مجمع المهبولة",
   "folders.villas": "بيوت وفلل سكنية",
   "folders.previous": "عقارات سابقة تم إدارتها",
   "folders.construction": "عقارات تم إنشاؤها وترميمها",
@@ -258,7 +259,7 @@ export const translations = {
     'properties.categories.construction': 'مشاريع البناء والترميم',
 
     // المشاريع الحالية
-    'properties.jabriya.title': 'فندق الجابرية',
+    'properties.jabriya.title': "مول وفندق الجابرية",
     'properties.jabriya.description': 'منشأة فندقية متميزة تقع في منطقة الجابرية.',
 
     'properties.hotel.title': 'مشروع فندقي )',
@@ -374,7 +375,7 @@ export const translations = {
     'location.description': 'المكتب الرئيسي في أبراج مزايا – الكويت.',
     'location.headquarters': 'المكتب الرئيسي – الكويت',
     'location.projects': 'مناطق المشاريع',
-    'location.projectsText': 'الجابرية، المهبولة، ومواقع متميزة أخرى',
+    'location.projectsText':"الجابرية، السالمية، حولي، الرميثية، وغيرها من المواقع الرئيسية.",
     'location.coordinates': 'الإحداثيات: 29.3743° N, 47.9894° E',
 
     'contact.title': 'تواصل مع شركة درة العالم',
@@ -390,7 +391,8 @@ export const translations = {
     'footer.rights': 'جميع الحقوق محفوظة.',
     'footer.company': 'الشركات',
     'footer.services': 'الخدمات',
- "gallery": "معرض الصور",
+ "gallery": "معرض الصور",  "folders.bnidalqar": "مجمع بنيد القار"
+    ,
  "distinct": "مميز",
     'footer.phoneNumbers': 'أرقام الهواتف',
     'footer.emails': 'عناوين البريد الإلكتروني',

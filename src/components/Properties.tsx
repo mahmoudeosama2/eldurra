@@ -33,10 +33,7 @@ import aljabria24 from '../assets/aljabriahotel/WhatsApp Image 2025-08-01 at 22.
 import aljabria25 from '../assets/aljabriahotel/WhatsApp Image 2025-08-01 at 22.31.54_9ed7b2c2.jpg';
 import aljabria26 from '../assets/aljabriahotel/WhatsApp Image 2025-08-01 at 22.31.54_b65989e5.jpg';
 import aljabria27 from '../assets/aljabriahotel/WhatsApp Image 2025-08-01 at 22.31.55_7b5872aa.jpg';
-import aljabria28 from '../assets/aljabriahotel/WhatsApp Image 2025-08-01 at 22.31.55_961561db.jpg';
-import aljabria29 from '../assets/aljabriahotel/WhatsApp Image 2025-08-01 at 22.31.55_cff12cc7.jpg';
 import aljabria30 from '../assets/aljabriahotel/WhatsApp Image 2025-08-01 at 22.31.55_df663050.jpg';
-import aljabria31 from '../assets/aljabriahotel/WhatsApp Image 2025-08-01 at 22.31.55_ee00ab6e.jpg';
 import aljabria32 from '../assets/aljabriahotel/WhatsApp Image 2025-08-01 at 22.31.56_7842b42a.jpg';
 import aljabria33 from '../assets/aljabriahotel/WhatsApp Image 2025-08-01 at 22.31.56_c9a5ffee.jpg';
 import aljabria34 from '../assets/aljabriahotel/WhatsApp Image 2025-08-01 at 22.31.56_ce9dc41d.jpg';
@@ -45,17 +42,15 @@ import three from '../assets/3.jpg';
 import four from '../assets/4.jpg';
 import five from '../assets/5.jpg';
 import sex from '../assets/6.jpg';
-import btbuilding from '../assets/blue.jpg';
-import lolohyber from '../assets/lolohyber.jpg';
-import lolohyber2 from '../assets/lolohyber2.jpg';
-import lolohyber3 from '../assets/lolohyber3.jpg';
-import altijari from '../assets/altijari.jpg';
-import daralawad from '../assets/daralwad.jpg';
 
 // Alrayaan Complex - Salmiyah
 import alrayaan1 from '../assets/Alrayaan Complex - Salmiyah/السالمية الريان 5.jpg';
 import alrayaan2 from '../assets/Alrayaan Complex - Salmiyah/السالمية الريان 7.jpg';
 import alrayaan3 from '../assets/Alrayaan Complex - Salmiyah/السالمية الريان 8.jpg';
+
+// Bnid Al-Qar Complex
+import bnidAlqar14and16 from '../assets/Bnid-Alqar/بنيد القار 14&16  .2.jpg';
+import bnidAlqar16and14 from '../assets/Bnid-Alqar/بنيد القار عقار 14&16 .1.jpg';
 
 // La Plage Complex
 import lablag1 from '../assets/Lablag Complex - arabian gulf street/البلاج 2.jpg';
@@ -63,7 +58,6 @@ import lablag2 from '../assets/Lablag Complex - arabian gulf street/البلاج
 
 // Mahbullah Properties
 import mahbullah1 from '../assets/Mahbullah 216/المهبولة 216 .1.jpg';
-import mahbullah2 from '../assets/Mahbullah 216/المهبولة 216.jpg';
 import mahbullahComplex1 from '../assets/Mahbullah Complex/عقارات المهبولة 3.jpg';
 import mahbullahComplex2 from '../assets/Mahbullah Complex/عقارات المهبولة 4.jpg';
 
@@ -107,8 +101,8 @@ const Properties: React.FC = () => {
     aljabria6, aljabria7, aljabria8, aljabria9, aljabria10, aljabria11, 
     aljabria12, aljabria13, aljabria14, aljabria15, aljabria16, aljabria17, 
     aljabria18, aljabria19, aljabria20, aljabria21, aljabria22, aljabria23, 
-    aljabria24, aljabria25, aljabria26, aljabria27, aljabria28, aljabria29, 
-    aljabria30, aljabria31, aljabria32, aljabria33, aljabria34, 
+    aljabria24, aljabria25, aljabria26, aljabria27,
+    aljabria30,  aljabria32, aljabria33, aljabria34, 
     five, sex, three, four
   ];
 
@@ -177,6 +171,20 @@ const Properties: React.FC = () => {
           location: 'https://maps.app.goo.gl/n7ZhwdxmRNbRTKe7A',
           featured: false,
           gallery: [alrayaan1, alrayaan2, alrayaan3]
+        }
+      ]
+    },
+    {
+      folderName: t("folders.bnidalqar"),
+      folderNameEn: "Bnid Al-Qar Complex",
+      category: 'complexes',
+      properties: [
+        {
+          image: bnidAlqar16and14,
+          //title: t('properties.bnidalqar.title'),
+          category: 'complexes',
+          featured: false,
+          gallery: [bnidAlqar16and14, bnidAlqar14and16]
         }
       ]
     },

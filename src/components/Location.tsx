@@ -94,23 +94,7 @@ const Location: React.FC = () => {
           </div>
 
           {/* Bottom Address Bar */}
-          <div className="bg-gradient-to-r from-slate-800/50 to-slate-700/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-600/50">
-            <div className="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
-              <div className="flex items-center space-x-3">
-                <div className="w-10 h-10 bg-amber-500 rounded-full flex items-center justify-center">
-                  <MapPin className="text-white" size={20} />
-                </div>
-                <div>
-                  <p className="text-white font-semibold">{t('contact.fullAddress2')}</p>
-                  <p className="text-gray-300 text-sm">{t('contact.fullAddress')}</p>
-                </div>
-              </div>
-              <div className="flex items-center space-x-2 text-amber-400 cursor-pointer hover:text-amber-300 transition-colors" onClick={openInGoogleMaps}>
-                <span className="text-sm font-medium">{t('location.openInMaps')}</span>
-                <ExternalLink size={16} />
-              </div>
-            </div>
-          </div>
+         
         </div>
       </div>
     </section>
