@@ -6,7 +6,7 @@ const WhatsAppButton: React.FC = () => {
   const { t } = useLanguage();
 
   const handleWhatsAppClick = () => {
-    const phoneNumber = '+96599615116'; // World Durra Co number
+    const phoneNumber = '+96599615116'; // Hamed Awadh Group number
     const message = encodeURIComponent(t('whatsapp.message'));
     window.open(`https://wa.me/${phoneNumber}?text=${message}`, '_blank');
   };

@@ -11,7 +11,7 @@ const Footer: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="md:col-span-2">
             <h3 className="text-2xl font-bold mb-4">
-              {language === 'ar' ? 'شركة درة العالم' : 'WORLD DURRA CO'}
+              {language === 'ar' ? 'مجموعة حامد عوض' : 'Hamed Awadh Group'}
             </h3>
             <p className="text-gray-300 mb-6">
               {t('footer.description')}
@@ -38,11 +38,14 @@ const Footer: React.FC = () => {
             <div className="mt-6 space-y-3">
               <div>
                 <h4 className="text-lg font-semibold mb-2 text-amber-400">{t('footer.company')}</h4>
+                 <p className="text-gray-300 text-sm">
+                 {language === 'ar' ? 'شركة حامد عوض'  : 'Hamed Awadh CO'}
+                </p>
                 <p className="text-gray-300 text-sm">
-                  {language === 'ar' ? 'شركة درة العالم' : 'WORLD DURRA CO'}
+                 {language === 'ar' ? 'شركة درة العالم' : 'WORLD DURRA CO'}
                 </p>
                 {/* <p className="text-gray-300 text-sm">
-                  {language === 'ar' ? 'شركة حامد عوض الدولية' : 'Hamed Awadh International'}
+                  {language === 'ar' ? 'شركة حامد عوض الدولية' : 'Hamed Awadh  International'}
                 </p> */}
                 <p className="text-gray-300 text-sm">
                   {language === 'ar' ? 'شركة درة الخليج' : 'Gulf Durra Co'}
@@ -101,7 +104,7 @@ const Footer: React.FC = () => {
         </div>
                  
         <div className="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
-          <p>&copy; 2025 {language === 'ar' ? 'شركة درة العالم' : 'WORLD DURRA CO'}. {t('footer.rights')}</p>
+          <p>&copy; 2025 {language === 'ar' ? 'مجموعة حامد عوض' : 'Hamed Awadh Group'}. {t('footer.rights')}</p>
         </div>
       </div>
     </footer>

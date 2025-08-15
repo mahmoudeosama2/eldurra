@@ -20,7 +20,7 @@ export const translations = {
     'nav.contact': 'Contact',
 "exploreDescription": "Explore our distinguished collection of luxury properties and exceptional projects that reflect our vision in real estate development",
     // Hero Section
-    'hero.title': 'WORLD DURRA CO',
+    'hero.title': 'Hamed Awadh Group',
     'hero.subtitle': 'For Management and Leasing of Real Estate',
     'hero.cta': 'Contact Us',
 
@@ -52,7 +52,7 @@ export const translations = {
     'properties.hotel.description': 'A hotel project under development. Location: Jabriya. Expected to include hospitality services and strategic positioning with modern amenities.',
 
     'properties.mall.title': 'Commercial Complex',
-    'properties.mall.description': 'A multi-purpose complex under the management of WORLD DURRA COmpany.',
+    'properties.mall.description': 'A multi-purpose complex under the management of Hamed Awadh Groupmpany.',
 
     'properties.portfolio.title': 'Real Estate Portfolio',
     'properties.portfolio.description': 'Various projects managed or leased across Kuwait.',
@@ -101,14 +101,14 @@ export const translations = {
     'properties.residential.description': 'Part of residential villa development projects currently being developed and managed.',
     'properties.luxury.title': 'Luxury Villa Project',
     'properties.luxury.description': 'Premium villa development with luxury amenities and modern design.',
-    'properties.daralawad.title': 'Dar Al Awadh Villa',
+    'properties.daralawad.title': 'Dar Al Awadh  Villa',
     'properties.daralawad.description': 'Premium villa development in prime residential area.',
     "gallery": "Gallery",
    
 
     // Previous Projects
     'properties.salmiya.title': 'Previous Projects',
-    'properties.salmiya.description': 'Projects previously managed including La Blage, Al Hamra Complex, Al Rayan, and Salam Mall management period. Management handled personally by Hamed Awadh before WORLD DURRA COmpany establishment.',
+    'properties.salmiya.description': 'Projects previously managed including La Blage, Al Hamra Complex, Al Rayan, and Salam Mall management period. Management handled personally by Hamed Awadh  before Hamed Awadh Groupmpany establishment.',
 
     'properties.lolohyber.title': 'Salam Mall Management Period',
     'properties.lolohyber.description': 'Commercial entities including Lulu Hypermarket and Al Tijari Bank managed during Salam Mall administration period.',
@@ -155,7 +155,7 @@ export const translations = {
 'properties.clinic2.description': 'Shuab Al Bahri Medical Clinics.',
 
     // About
-    'about.title': 'About WORLD DURRA CO',
+    'about.title': 'About Hamed Awadh Group',
     'about.description': 'A real estate company specialized in leasing and management of residential and commercial properties in Kuwait.',
     'about.stats.experience': 'Years Experience',
     'about.stats.projects': 'Projects',
@@ -170,7 +170,7 @@ export const translations = {
     'location.coordinates': 'Coordinates: 29.3743° N, 47.9894° E',
     "properties.viewLocation": "View Location",
     // Contact
-    'contact.title': 'Contact WORLD DURRA CO',
+    'contact.title': 'Contact Hamed Awadh Group',
     'contact.description': 'Reach out to our team for inquiries or leasing.',
     'contact.phone': 'Phone',
     'contact.email': 'Email',
@@ -189,8 +189,8 @@ export const translations = {
     'footer.phoneNumbers': 'Phone Numbers',
     'footer.emails': 'Email Addresses',
     'footer.address': 'Address',
-    'footer.hamedAwadCo': 'Hamed Awad Co',
-    'footer.worldDurraCo': 'World Durra Co',
+    'footer.hamedAwadCo': 'Hamed Awadh Co',
+    'footer.worldDurraCo': 'Hamed Awadh Group',
     'footer.gulfDurraCo': 'Gulf Durra Co',
     'footer.country':"Kuwait - Al-Mirqab - Khaled Bin Al-Waleed Street - Mazaya Tower 1 - 11th Floor" , 
      'footer.area': 'Mubarek Area',
@@ -236,7 +236,7 @@ export const translations = {
     'nav.location': 'الموقع',
     'nav.contact': 'اتصل بنا',
 
-    'hero.title': 'شركة درة العالم',
+    'hero.title': 'مجموعة حامد عوض',
     'hero.subtitle': 'لإدارة وتأجير العقارات',
     'hero.cta': 'تواصل معنا',
   "exploreDescription":"استكشف مجموعتنا المتميزة من العقارات الفاخرة والمشاريع الاستثنائية التي تعكس رؤيتنا في التطوير العقاري",
@@ -266,7 +266,7 @@ export const translations = {
     'properties.hotel.description': 'مشروع فندقي قيد التطوير، الموقع: الجابرية. من المتوقع أن يضم خدمات ضيافة وموقع استراتيجي مع مرافق حديثة.',
 
     'properties.mall.title': 'مجمع تجاري',
-    'properties.mall.description': 'مجمع متعدد الأغراض تحت إدارة شركة درة العالم.',
+    'properties.mall.description': 'مجمع متعدد الأغراض تحت إدارة مجموعة حامد عوض.',
 
     'properties.portfolio.title': 'المحفظة العقارية',
     'properties.portfolio.description': 'مشاريع متعددة تُدار أو يتم تأجيرها في مختلف أنحاء الكويت.',
@@ -321,7 +321,7 @@ export const translations = {
 
     // المشاريع السابقة
     'properties.salmiya.title': 'مشاريع سابقة',
-    'properties.salmiya.description': 'مشاريع تمت إدارتها سابقاً تشمل لا بلاج، مجمع الحمراء، الريان، وفترة إدارة السلام مول. تم التعامل من قبل حامد عوض شخصياً قبل تأسيس شركة درة العالم.',
+    'properties.salmiya.description': 'مشاريع تمت إدارتها سابقاً تشمل لا بلاج، مجمع الحمراء، الريان، وفترة إدارة السلام مول. تم التعامل من قبل حامد عوض شخصياً قبل تأسيس مجموعة حامد عوض.',
 
     'properties.lolohyber.title': 'فترة إدارة السلام مول',
     'properties.lolohyber.description': 'كيانات تجارية تشمل لولو هايبر والبنك التجاري تم إدارتها خلال فترة إدارة السلام مول.',
@@ -365,7 +365,7 @@ export const translations = {
     'properties.clinic2.title': 'عيادات طبية الشعب البحري',
     'properties.clinic2.description': 'عيادات طبية الشعب البحري.',
 
-    'about.title': 'عن شركة درة العالم',
+    'about.title': 'عن مجموعة حامد عوض',
     'about.description': 'شركة عقارية متخصصة في إدارة وتأجير العقارات السكنية والتجارية في الكويت.',
     'about.stats.experience': 'سنوات خبرة',
     'about.stats.projects': 'مشاريع',
@@ -378,7 +378,7 @@ export const translations = {
     'location.projectsText':"الجابرية، السالمية، حولي، الرميثية، وغيرها من المواقع الرئيسية.",
     'location.coordinates': 'الإحداثيات: 29.3743° N, 47.9894° E',
 
-    'contact.title': 'تواصل مع شركة درة العالم',
+    'contact.title': 'تواصل مع مجموعة حامد عوض',
     'contact.description': 'للاستفسارات أو تأجير العقارات، تواصل مع فريقنا.',
     'contact.phone': 'الهاتف',
     'contact.email': 'البريد الإلكتروني',
@@ -398,7 +398,7 @@ export const translations = {
     'footer.emails': 'عناوين البريد الإلكتروني',
     'footer.address': 'العنوان',
     'footer.hamedAwadCo': 'شركة حامد عوض',
-    'footer.worldDurraCo': 'شركة درة العالم',
+    'footer.worldDurraCo': 'مجموعة حامد عوض',
     'footer.gulfDurraCo': 'شركة درة الخليج',
     'footer.country': "الكويت - المرقاب - شارع خالد بن الوليد - برج مزايا 1 - الدور 11",
     'footer.area': 'منطقة المرقاب',

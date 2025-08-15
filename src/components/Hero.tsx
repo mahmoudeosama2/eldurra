@@ -1,53 +1,118 @@
 import * as React from 'react';
 import { useLanguage } from '../contexts/LanguageContext';
-  import ar from '../assets/logo_ar.jpg';
-import en from '../assets/logo_en.jpg';
-const Hero: React.FC = () => {
-  const { language, t } = useLanguage();
-  const [imageError, setImageError] = React.useState(false);
 
-  // Reset image error when language changes
+import ar from '../assets/logo_ar.jpg';
+import en from '../assets/logo_en.jpg';
+import hamed_ar from '../assets/hamed_ar.png';
+import hamed_en from '../assets/hamed_en.png';
+import alkhleg_ar from '../assets/alkhleg_ar.png';
+import alkhleg_en from '../assets/alkhleg_en.png';
+
+const Hero: React.FC = () => {
+  const { language } = useLanguage();
+  const [imageErrors, setImageErrors] = React.useState({
+    main: false,
+    hamed: false,
+    alkhleg: false
+  });
+
   React.useEffect(() => {
-    setImageError(false);
+    setImageErrors({
+      main: false,
+      hamed: false,
+      alkhleg: false
+    });
   }, [language]);
+
+  const handleImageError = (logoType: 'main' | 'hamed' | 'alkhleg') => {
+    setImageErrors(prev => ({
+      ...prev,
+      [logoType]: true
+    }));
+  };
 
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center">
-      {/* Background */}
+      {/* خلفية مع الـ gradient الأصلي */}
       <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-800 to-teal-900">
         <div className="absolute inset-0 bg-black/30"></div>
-        <div 
+        <div
           className="absolute inset-0 opacity-20"
           style={{
-            backgroundImage: "url('https://images.pexels.com/photos/323705/pexels-photo-323705.jpeg')",
+            backgroundImage:
+              "url('https://images.pexels.com/photos/323705/pexels-photo-323705.jpeg')",
             backgroundSize: 'cover',
             backgroundPosition: 'center'
           }}
         ></div>
       </div>
 
-      <div className="relative z-10 text-center text-white px-4 max-w-4xl mx-auto">
-        {/* Logo Section */}
-        <div className="mb-8 flex justify-center">
-          {!imageError ? (
-            <img 
-              src={language === 'ar' ? ar : en}
-              alt={language === 'ar' ? 'شركة درة العالم' : 'WORLD DURRA CO'}
-              className="h-48 md:h-64 lg:h-80 w-auto object-contain filter brightness-0 invert drop-shadow-lg"
-              onError={() => setImageError(true)}
+      <div className="relative z-10 text-center text-white px-4 max-w-6xl mx-auto flex flex-col items-center">
+        
+        {/* لوجو Hamed فوق */}
+        <div className="mb-2">
+          {!imageErrors.hamed ? (
+            <img
+              src={language === 'ar' ? hamed_ar : hamed_en}
+              alt={language === 'ar' ? 'شركة حامد - الشركة الأم' : 'Hamed Company - Parent Company'}
+              className="h-64 md:h-80 lg:h-96 w-auto object-contain filter brightness-0 invert drop-shadow-2xl transition-transform duration-300 hover:scale-105"
+              onError={() => handleImageError('hamed')}
             />
           ) : (
             <h1 className="text-4xl md:text-6xl font-bold leading-tight">
-              {t('hero.title')}
+              {language === 'ar' ? 'شركة حامد - الشركة الأم' : 'Hamed Company - Parent Company'}
             </h1>
           )}
         </div>
 
-       
-        
-        {/* <button className="bg-amber-500 hover:bg-amber-600 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-xl">
-          {t('hero.cta')}
-        </button> */}
+        {/* اللوجوهين تحت جنب بعض */}
+        <div className="flex justify-center items-center gap-16 mb-6">
+          {/* اللوجو الرئيسي للمجموعة */}
+          <div>
+            {!imageErrors.main ? (
+              <img
+                src={language === 'ar' ? ar : en}
+                alt={language === 'ar' ? 'مجموعة حامد عوض' : 'Hamed Awadh Group'}
+                className="h-40 md:h-48 lg:h-56 w-auto object-contain filter brightness-0 invert drop-shadow-lg transition-transform duration-300 hover:scale-105"
+                onError={() => handleImageError('main')}
+              />
+            ) : (
+              <span className="text-xl md:text-2xl font-semibold">
+                {language === 'ar' ? 'مجموعة حامد عوض' : 'Hamed Awadh Group'}
+              </span>
+            )}
+          </div>
+
+          {/* لوجو الخليج */}
+          <div>
+            {!imageErrors.alkhleg ? (
+              <img
+                src={language === 'ar' ? alkhleg_ar : alkhleg_en}
+                alt={language === 'ar' ? 'شركة الخليج' : 'Alkhleg Company'}
+                className="h-44 md:h-52 lg:h-60 w-auto object-contain filter brightness-0 invert drop-shadow-lg transition-transform duration-300 hover:scale-105"
+                onError={() => handleImageError('alkhleg')}
+              />
+            ) : (
+              <span className="text-xl md:text-2xl font-semibold">
+                {language === 'ar' ? 'شركة الخليج' : 'Alkhleg Company'}
+              </span>
+            )}
+          </div>
+        </div>
+
+        {/* النص تحت اللوجوهات */}
+        <div className="text-center">
+<h2
+  className="inline-block pb-1 text-4xl md:text-6xl lg:text-7xl font-bold leading-normal bg-gradient-to-r from-orange-300 via-orange-400 to-orange-500 bg-clip-text text-transparent animate-pulse"
+  style={{
+    fontFamily: language === 'ar' ? 'Amiri, serif' : 'Playfair Display, serif'
+  }}
+>
+  {language === 'ar' ? 'مجموعة حامد عوض' : 'Hamed Awadh Group'}
+</h2>
+
+
+        </div>
       </div>
     </section>
   );
