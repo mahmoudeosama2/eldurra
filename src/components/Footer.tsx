@@ -85,8 +85,8 @@ const Footer: React.FC = () => {
               <ul className="space-y-1 text-gray-300 text-sm">
 
                 <li>
-                  <a href="mailto:durraworld.co@gmail.com" className="hover:text-amber-400 transition-colors">
-                    durraworld.co@gmail.com
+                  <a href="mailto:info@hamedawadh-int.com" className="hover:text-amber-400 transition-colors">
+                    info@hamedawadh-int.com
                   </a>
                 </li>
               </ul>
