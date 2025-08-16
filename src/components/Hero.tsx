@@ -109,9 +109,7 @@ const Hero: React.FC = () => {
     WebkitBackgroundClip: 'text',
     WebkitTextFillColor: 'transparent'
   }}
-  style={{
-    fontFamily: language === 'ar' ? 'Amiri, serif' : 'Playfair Display, serif'
-  }}
+  
 >
   {language === 'ar' ? 'مجموعة حامد عوض' : 'Hamed Awadh Group'}
 </h2>
