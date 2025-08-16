@@ -316,7 +316,7 @@ const Properties: React.FC = () => {
   };
 
   return (
-    <section id="properties" className="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 relative overflow-hidden">
+    <section id="properties" className="py-20 bg-gradient-to-br from-white via-gray-50 to-white relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0" style={{
@@ -327,10 +327,10 @@ const Properties: React.FC = () => {
       <div className="container mx-auto px-4 relative z-10">
         {/* Header */}
         <div className="text-center mb-16">
-          <h2 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-white via-amber-100 to-amber-200 bg-clip-text text-transparent mb-6">
+          <h2 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-gray-900 via-blue-800 to-blue-900 bg-clip-text text-transparent mb-6">
             {t('properties.title')}
           </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
             {t('exploreDescription')}
           </p>
         </div>
@@ -343,18 +343,22 @@ const Properties: React.FC = () => {
               <button
                 key={category.id}
                 onClick={() => setActiveCategory(category.id)}
-                className={`group relative overflow-hidden px-6 py-3 rounded-full font-medium transition-all duration-300 ${
+                className={`group relative overflow-hidden px-6 py-3 rounded-full font-medium transition-all duration-300 border ${
                   activeCategory === category.id
-                    ? 'bg-gradient-to-r from-amber-500 to-amber-600 text-black shadow-lg shadow-amber-500/25'
-                    : 'bg-slate-800/50 text-gray-300 hover:bg-slate-700/50 border border-slate-600/50'
+                    ? 'text-white shadow-lg border-blue-600'
+                    : 'bg-white/80 text-gray-700 hover:bg-gray-100 border-gray-300'
                 }`}
+                style={activeCategory === category.id ? { 
+                  background: 'linear-gradient(to right, #004aaf, #0056cc)',
+                  boxShadow: '0 4px 14px 0 rgba(0, 74, 175, 0.25)'
+                } : {}}
               >
                 <div className="flex items-center gap-2 relative z-10">
                   <Icon size={18} />
                   <span>{category.name}</span>
                 </div>
                 {activeCategory === category.id && (
-                  <div className="absolute inset-0 bg-gradient-to-r from-amber-400/20 to-amber-600/20 animate-pulse" />
+                  <div className="absolute inset-0 bg-gradient-to-r from-blue-400/20 to-blue-600/20 animate-pulse" />
                 )}
               </button>
             );
@@ -367,13 +371,13 @@ const Properties: React.FC = () => {
             <div key={groupIndex} className="space-y-8">
               {/* Group Header */}
               <div className="text-center">
-                <div className="inline-flex items-center gap-3 bg-amber-500/20 backdrop-blur-sm border border-amber-500/30 rounded-full px-8 py-4 mb-4">
-                  <Building className="w-6 h-6 text-amber-400" />
-                  <h3 className="text-2xl md:text-3xl font-bold text-amber-400">
+                <div className="inline-flex items-center gap-3 bg-blue-50 backdrop-blur-sm border border-blue-200 rounded-full px-8 py-4 mb-4">
+                  <Building className="w-6 h-6" style={{ color: '#004aaf' }} />
+                  <h3 className="text-2xl md:text-3xl font-bold" style={{ color: '#004aaf' }}>
                     {group.folderName}
                   </h3>
                 </div>
-                <div className="w-24 h-1 bg-gradient-to-r from-amber-500 to-amber-600 mx-auto rounded-full"></div>
+                <div className="w-24 h-1 mx-auto rounded-full" style={{ background: 'linear-gradient(to right, #004aaf, #0056cc)' }}></div>
               </div>
 
               {/* Properties Grid for this group */}
@@ -398,13 +402,13 @@ const Properties: React.FC = () => {
                       onMouseEnter={() => setHoveredCard(cardId)}
                       onMouseLeave={() => setHoveredCard(null)}
                     >
-                      <div className={`bg-gradient-to-br from-slate-800/80 to-slate-900/80 backdrop-blur-sm rounded-2xl overflow-hidden border border-slate-700/50 transition-all duration-500 hover:border-amber-500/50 ${
-                        isJabriya ? 'ring-4 ring-amber-500/30 shadow-2xl shadow-amber-500/20' : ''
+                      <div className={`bg-white backdrop-blur-sm rounded-2xl overflow-hidden border border-gray-200 transition-all duration-500 hover:border-blue-400 shadow-lg ${
+                        isJabriya ? 'ring-4 ring-blue-300 shadow-2xl shadow-blue-500/20' : ''
                       }`}>
                         {/* Featured Badge */}
                         {property.featured && (
                           <div className="absolute top-4 left-4 z-20">
-                            <div className="flex items-center gap-1 bg-gradient-to-r from-amber-500 to-amber-600 text-black px-3 py-1 rounded-full text-sm font-bold shadow-lg">
+                            <div className="flex items-center gap-1 text-white px-3 py-1 rounded-full text-sm font-bold shadow-lg" style={{ background: 'linear-gradient(to right, #004aaf, #0056cc)' }}>
                               <Star size={14} fill="currentColor" />
                               <span>{t("distinct")}</span>
                             </div>
@@ -452,7 +456,8 @@ const Properties: React.FC = () => {
                               {property.location && (
                                 <button
                                   onClick={() => handleLocationClick(property.location!)}
-                                  className="bg-amber-500 hover:bg-amber-600 text-black p-3 rounded-full transition-all duration-200 shadow-lg hover:shadow-xl hover:scale-110"
+                                  className="text-white p-3 rounded-full transition-all duration-200 shadow-lg hover:shadow-xl hover:scale-110"
+                                  style={{ backgroundColor: '#004aaf' }}
                                 >
                                   <MapPin size={20} />
                                 </button>
@@ -465,12 +470,12 @@ const Properties: React.FC = () => {
                         <div className="p-6">
                           {/* Category Tag */}
                           <div className="mb-3">
-                            <span className={`inline-block px-3 py-1 rounded-full text-xs font-semibold bg-gradient-to-r ${getCategoryColor(property.category)} text-white`}>
+                            <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold text-white" style={{ background: 'linear-gradient(to right, #004aaf, #0056cc)' }}>
                               {categories.find(c => c.id === property.category)?.name}
                             </span>
                           </div>
 
-                          <h4 className={`font-bold text-white mb-3 line-clamp-2 group-hover:text-amber-400 transition-colors duration-300 ${
+                          <h4 className={`font-bold text-gray-900 mb-3 line-clamp-2 group-hover:text-blue-600 transition-colors duration-300 ${
                             isJabriya ? 'text-2xl md:text-3xl' : 'text-xl'
                           }`}>
                             {property.title}
@@ -478,7 +483,7 @@ const Properties: React.FC = () => {
 
                           {/* Special description for Jabriya */}
                           {isJabriya && (
-                            <p className="text-gray-300 text-lg mb-4 leading-relaxed">
+                            <p className="text-gray-600 text-lg mb-4 leading-relaxed">
 {t('title.aljbria')}                            </p>
                           )}
 
@@ -487,8 +492,8 @@ const Properties: React.FC = () => {
                             <div className="mt-4">
                               <div className="flex items-center justify-between mb-3">
                                 <div className="flex items-center gap-2">
-                                  <div className="w-4 h-4 bg-gradient-to-r from-amber-500 to-amber-600 rounded-full"></div>
-                                  <span className="text-sm text-gray-400 font-medium">
+                                  <div className="w-4 h-4 rounded-full" style={{ background: 'linear-gradient(to right, #004aaf, #0056cc)' }}></div>
+                                  <span className="text-sm text-gray-600 font-medium">
                                     {t("gallery")} ({property.gallery!.length} )
                                   </span>
                                 </div>
@@ -498,14 +503,16 @@ const Properties: React.FC = () => {
                                   <div className="flex gap-2">
                                     <button
                                       onClick={() => scrollGallery('left', scrollKey)}
-                                      className="bg-slate-700/50 hover:bg-slate-600/50 text-amber-400 p-2 rounded-full transition-all duration-200 hover:scale-110"
+                                      className="bg-gray-100 hover:bg-gray-200 p-2 rounded-full transition-all duration-200 hover:scale-110"
+                                      style={{ color: '#004aaf' }}
                                       aria-label="التمرير للخلف"
                                     >
                                       <ChevronLeft size={16} />
                                     </button>
                                     <button
                                       onClick={() => scrollGallery('right', scrollKey)}
-                                      className="bg-slate-700/50 hover:bg-slate-600/50 text-amber-400 p-2 rounded-full transition-all duration-200 hover:scale-110"
+                                      className="bg-gray-100 hover:bg-gray-200 p-2 rounded-full transition-all duration-200 hover:scale-110"
+                                      style={{ color: '#004aaf' }}
                                       aria-label="التمرير للأمام"
                                     >
                                       <ChevronRight size={16} />
@@ -533,6 +540,7 @@ const Properties: React.FC = () => {
                                       className={`relative flex-shrink-0 w-20 h-20 rounded-lg overflow-hidden cursor-pointer group/thumb hover:ring-2 hover:ring-amber-500/50 transition-all duration-200 hover:scale-105 ${
                                         isJabriya ? 'snap-start' : ''
                                       }`}
+                                     style={{ '--tw-ring-color': '#004aaf' } as React.CSSProperties}
                                       onClick={() => setSelectedImage(galleryImg)}
                                     >
                                       <img
@@ -555,15 +563,16 @@ const Properties: React.FC = () => {
                                 {/* Enhanced Progress Indicator for Jabriya */}
                                 {isJabriya && (
                                   <div className="flex justify-center mt-3">
-                                    <div className="flex items-center gap-2 bg-slate-800/50 backdrop-blur-sm px-3 py-1.5 rounded-full">
-                                      <span className="text-xs text-amber-400 font-medium">
+                                    <div className="flex items-center gap-2 bg-gray-100 backdrop-blur-sm px-3 py-1.5 rounded-full">
+                                      <span className="text-xs font-medium" style={{ color: '#004aaf' }}>
                                        {t("move")}
                                       </span>
                                       <div className="flex gap-1">
                                         {[...Array(Math.ceil(property.gallery!.length / 5))].map((_, i) => (
                                           <div
                                             key={i}
-                                            className="w-1.5 h-1.5 rounded-full bg-amber-400/30"
+                                            className="w-1.5 h-1.5 rounded-full"
+                                            style={{ backgroundColor: 'rgba(0, 74, 175, 0.3)' }}
                                           />
                                         ))}
                                       </div>
@@ -577,11 +586,16 @@ const Properties: React.FC = () => {
 
                         {/* Hover Glow Effect */}
                         <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
-                          <div className={`absolute inset-0 rounded-2xl bg-gradient-to-r ${
+                          <div className={`absolute inset-0 rounded-2xl ${
                             isJabriya 
-                              ? 'from-amber-500/20 to-yellow-600/20' 
-                              : 'from-amber-500/10 to-amber-600/10'
-                          } blur-xl`} />
+                              ? 'blur-xl' 
+                              : 'blur-xl'
+                          }`} 
+                          style={{ 
+                            background: isJabriya 
+                              ? 'linear-gradient(to right, rgba(0, 74, 175, 0.2), rgba(0, 86, 204, 0.2))' 
+                              : 'linear-gradient(to right, rgba(0, 74, 175, 0.1), rgba(0, 86, 204, 0.1))'
+                          }} />
                         </div>
                       </div>
                     </div>
@@ -595,8 +609,8 @@ const Properties: React.FC = () => {
         {/* Empty State */}
         {filteredGroups.length === 0 && (
           <div className="text-center py-20">
-            <Building className="w-16 h-16 text-gray-600 mx-auto mb-4" />
-            <h3 className="text-xl font-semibold text-gray-400 mb-2">لا توجد عقارات في هذه الفئة</h3>
+            <Building className="w-16 h-16 text-gray-400 mx-auto mb-4" />
+            <h3 className="text-xl font-semibold text-gray-600 mb-2">لا توجد عقارات في هذه الفئة</h3>
             <p className="text-gray-500">جرب تصفح فئة أخرى لعرض المزيد من العقارات</p>
           </div>
         )}

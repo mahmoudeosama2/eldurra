@@ -34,10 +34,10 @@ const Hero: React.FC = () => {
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center">
       {/* خلفية مع الـ gradient الأصلي */}
-      <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-800 to-teal-900">
-        <div className="absolute inset-0 bg-black/30"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-white via-gray-50 to-blue-50">
+        <div className="absolute inset-0 bg-white/80"></div>
         <div
-          className="absolute inset-0 opacity-20"
+          className="absolute inset-0 opacity-10"
           style={{
             backgroundImage:
               "url('https://images.pexels.com/photos/323705/pexels-photo-323705.jpeg')",
@@ -47,7 +47,7 @@ const Hero: React.FC = () => {
         ></div>
       </div>
 
-      <div className="relative z-10 text-center text-white px-4 max-w-6xl mx-auto flex flex-col items-center">
+      <div className="relative z-10 text-center text-gray-900 px-4 max-w-6xl mx-auto flex flex-col items-center">
         
         {/* لوجو Hamed فوق */}
         <div className="mb-2">
@@ -55,7 +55,7 @@ const Hero: React.FC = () => {
             <img
               src={language === 'ar' ? hamed_ar : hamed_en}
               alt={language === 'ar' ? 'شركة حامد - الشركة الأم' : 'Hamed Company - Parent Company'}
-              className="h-64 md:h-80 lg:h-96 w-auto object-contain filter brightness-0 invert drop-shadow-2xl transition-transform duration-300 hover:scale-105"
+              className="h-64 md:h-80 lg:h-96 w-auto object-contain drop-shadow-2xl transition-transform duration-300 hover:scale-105"
               onError={() => handleImageError('hamed')}
             />
           ) : (
@@ -73,7 +73,7 @@ const Hero: React.FC = () => {
               <img
                 src={language === 'ar' ? ar : en}
                 alt={language === 'ar' ? 'مجموعة حامد عوض' : 'Hamed Awadh Group'}
-                className="h-40 md:h-48 lg:h-56 w-auto object-contain filter brightness-0 invert drop-shadow-lg transition-transform duration-300 hover:scale-105"
+                className="h-40 md:h-48 lg:h-56 w-auto object-contain drop-shadow-lg transition-transform duration-300 hover:scale-105"
                 onError={() => handleImageError('main')}
               />
             ) : (
@@ -89,7 +89,7 @@ const Hero: React.FC = () => {
               <img
                 src={language === 'ar' ? alkhleg_ar : alkhleg_en}
                 alt={language === 'ar' ? 'شركة الخليج' : 'Alkhleg Company'}
-                className="h-44 md:h-52 lg:h-60 w-auto object-contain filter brightness-0 invert drop-shadow-lg transition-transform duration-300 hover:scale-105"
+                className="h-44 md:h-52 lg:h-60 w-auto object-contain drop-shadow-lg transition-transform duration-300 hover:scale-105"
                 onError={() => handleImageError('alkhleg')}
               />
             ) : (
@@ -103,7 +103,12 @@ const Hero: React.FC = () => {
         {/* النص تحت اللوجوهات */}
         <div className="text-center">
 <h2
-  className="inline-block pb-1 text-4xl md:text-6xl lg:text-7xl font-bold leading-normal bg-gradient-to-r from-orange-300 via-orange-400 to-orange-500 bg-clip-text text-transparent animate-pulse"
+  className="inline-block pb-1 text-4xl md:text-6xl lg:text-7xl font-bold leading-normal bg-gradient-to-r from-blue-600 via-blue-700 to-blue-800 bg-clip-text text-transparent animate-pulse"
+  style={{
+    background: 'linear-gradient(to right, #004aaf, #0056cc, #0062e6)',
+    WebkitBackgroundClip: 'text',
+    WebkitTextFillColor: 'transparent'
+  }}
   style={{
     fontFamily: language === 'ar' ? 'Amiri, serif' : 'Playfair Display, serif'
   }}

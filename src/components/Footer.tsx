@@ -6,7 +6,7 @@ const Footer: React.FC = () => {
   const { language, t } = useLanguage();
 
   return (
-    <footer className="bg-slate-900 text-white py-12">
+    <footer className="bg-gray-900 text-white py-12">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="md:col-span-2">
@@ -20,7 +20,7 @@ const Footer: React.FC = () => {
               {/* <a href="https://www.facebook.com/mahmoudeosama2" target="_blank" rel="noopener noreferrer" className="bg-slate-800 hover:bg-amber-500 p-3 rounded-full transition-colors">
                 <Facebook size={20} />
               </a> */}
-              <a href="https://www.instagram.com/eldurraworld/" target="_blank" rel="noopener noreferrer" className="bg-slate-800 hover:bg-amber-500 p-3 rounded-full transition-colors">
+              <a href="https://www.instagram.com/eldurraworld/" target="_blank" rel="noopener noreferrer" className="bg-gray-800 p-3 rounded-full transition-colors hover:bg-blue-600" style={{ backgroundColor: '#004aaf' }}>
                 <Instagram size={20} />
               </a>
             </div>
@@ -29,15 +29,15 @@ const Footer: React.FC = () => {
           <div>
             <h4 className="text-lg font-semibold mb-4">{t('footer.quickLinks')}</h4>
             <ul className="space-y-2">
-              <li><a href="#home" className="text-gray-300 hover:text-amber-400 transition-colors">{t('nav.home')}</a></li>
-              <li><a href="#properties" className="text-gray-300 hover:text-amber-400 transition-colors">{t('nav.properties')}</a></li>
-              <li><a href="#about" className="text-gray-300 hover:text-amber-400 transition-colors">{t('nav.about')}</a></li>
-              <li><a href="#contact" className="text-gray-300 hover:text-amber-400 transition-colors">{t('nav.contact')}</a></li>
+              <li><a href="#home" className="text-gray-300 hover:text-blue-400 transition-colors">{t('nav.home')}</a></li>
+              <li><a href="#properties" className="text-gray-300 hover:text-blue-400 transition-colors">{t('nav.properties')}</a></li>
+              <li><a href="#about" className="text-gray-300 hover:text-blue-400 transition-colors">{t('nav.about')}</a></li>
+              <li><a href="#contact" className="text-gray-300 hover:text-blue-400 transition-colors">{t('nav.contact')}</a></li>
             </ul>
                          
             <div className="mt-6 space-y-3">
               <div>
-                <h4 className="text-lg font-semibold mb-2 text-amber-400">{t('footer.company')}</h4>
+                <h4 className="text-lg font-semibold mb-2" style={{ color: '#004aaf' }}>{t('footer.company')}</h4>
                  <p className="text-gray-300 text-sm">
                  {language === 'ar' ? 'شركة حامد عوض'  : 'Hamed Awadh CO'}
                 </p>
@@ -52,7 +52,7 @@ const Footer: React.FC = () => {
                 </p>
               </div>
               <div>
-                <h4 className="text-lg font-semibold mb-2 text-amber-400">{t('footer.services')}</h4>
+                <h4 className="text-lg font-semibold mb-2" style={{ color: '#004aaf' }}>{t('footer.services')}</h4>
                 <p className="text-gray-300">
                   {language === 'ar' ? 'إدارة وتأجير العقارات' : 'Property Management & Leasing'}
                 </p>
@@ -65,7 +65,7 @@ const Footer: React.FC = () => {
             
             {/* Phone Numbers */}
             <div className="mb-4">
-              <h5 className="text-amber-400 font-medium mb-2 flex items-center">
+              <h5 className="font-medium mb-2 flex items-center" style={{ color: '#004aaf' }}>
                 <Phone size={16} className="mr-2" />
                 {t('footer.phoneNumbers')}
               </h5>
@@ -78,14 +78,14 @@ const Footer: React.FC = () => {
 
             {/* Email Addresses */}
             <div className="mb-4">
-              <h5 className="text-amber-400 font-medium mb-2 flex items-center">
+              <h5 className="font-medium mb-2 flex items-center" style={{ color: '#004aaf' }}>
                 <Mail size={16} className="mr-2" />
                 {t('footer.emails')}
               </h5>
               <ul className="space-y-1 text-gray-300 text-sm">
 
                 <li>
-                  <a href="mailto:info@hamedawadh-int.com" className="hover:text-amber-400 transition-colors">
+                  <a href="mailto:info@hamedawadh-int.com" className="hover:text-blue-400 transition-colors">
                     info@hamedawadh-int.com
                   </a>
                 </li>
@@ -94,7 +94,7 @@ const Footer: React.FC = () => {
 
             {/* Address */}
             <div>
-              <h5 className="text-amber-400 font-medium mb-2">{t('footer.address')}</h5>
+              <h5 className="font-medium mb-2" style={{ color: '#004aaf' }}>{t('footer.address')}</h5>
               <ul className="space-y-1 text-gray-300 text-sm">
                 <li>{t('footer.country')}</li>
 

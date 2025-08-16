@@ -14,19 +14,19 @@ const Location: React.FC = () => {
   };
 
   return (
-    <section id="location" className="py-16 bg-slate-900 relative overflow-hidden">
+    <section id="location" className="py-16 bg-gray-50 relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
-        <div className="absolute inset-0 bg-gradient-to-r from-amber-500/20 to-blue-500/20"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-blue-600/20"></div>
       </div>
       
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-6xl mx-auto">
           {/* Header */}
           <div className="flex items-center justify-center mb-12">
-            <div className="flex items-center space-x-4 bg-slate-800/50 backdrop-blur-sm rounded-full px-8 py-4 border border-amber-500/20">
-              <MapPin className="text-amber-400 animate-pulse" size={32} />
-              <h2 className="text-3xl md:text-4xl font-bold text-white">
+            <div className="flex items-center space-x-4 bg-white/80 backdrop-blur-sm rounded-full px-8 py-4 border border-blue-200">
+              <MapPin className="animate-pulse" style={{ color: '#004aaf' }} size={32} />
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
                 {t('location.title')}
               </h2>
             </div>
@@ -37,18 +37,18 @@ const Location: React.FC = () => {
             <div className="max-w-2xl w-full space-y-6">
               {/* Building Image Card */}
               <div className="relative group">
-                <div className="absolute inset-0 bg-gradient-to-r from-amber-500 to-blue-500 rounded-2xl blur opacity-20 group-hover:opacity-30 transition-opacity duration-300"></div>
-                <div className="relative bg-slate-800 rounded-2xl overflow-hidden border border-slate-700 group-hover:border-amber-500/50 transition-all duration-300">
+                <div className="absolute inset-0 rounded-2xl blur opacity-20 group-hover:opacity-30 transition-opacity duration-300" style={{ background: 'linear-gradient(to right, #004aaf, #0056cc)' }}></div>
+                <div className="relative bg-white rounded-2xl overflow-hidden border border-gray-200 group-hover:border-blue-400 transition-all duration-300">
                   <div className="aspect-[4/3] relative overflow-hidden">
                     <img 
                       src={btbuilding} 
                       alt="مبنى شركة الدرة العالمية"
                       className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent"></div>
+                    <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 via-transparent to-transparent"></div>
                     <div className="absolute bottom-4 left-4 right-4">
                       <div className="flex items-center space-x-2 text-white">
-                        <Building className="text-amber-400" size={20} />
+                        <Building style={{ color: '#004aaf' }} size={20} />
                         <span className="font-semibold text-lg">{t('footer.building')}</span>
                       </div>
                     </div>
@@ -58,19 +58,23 @@ const Location: React.FC = () => {
 
               {/* Location Info Cards - Centered */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <div className="bg-slate-800/80 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-amber-500/50 transition-all duration-300 group">
+                <div className="bg-white/90 backdrop-blur-sm rounded-xl p-6 border border-gray-200 hover:border-blue-400 transition-all duration-300 group">
                   <div className="flex items-center space-x-2 mb-3">
-                    <Building className="text-amber-400 group-hover:scale-110 transition-transform" size={20} />
-                    <h3 className="text-lg font-semibold text-white">
+                    <Building style={{ color: '#004aaf' }} className="group-hover:scale-110 transition-transform" size={20} />
+                    <h3 className="text-lg font-semibold text-gray-900">
                       {t('location.headquarters')}
                     </h3>
                   </div>
-                  <p className="text-gray-300 text-sm leading-relaxed mb-4">
+                  <p className="text-gray-600 text-sm leading-relaxed mb-4">
                     {t('contact.fullAddress')}
                   </p>
                   <button
                     onClick={openInGoogleMaps}
-                    className="inline-flex items-center space-x-3 bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-white px-8 py-3 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-amber-500/25 group"
+                    className="inline-flex items-center space-x-3 text-white px-8 py-3 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-lg group"
+                    style={{ 
+                      background: 'linear-gradient(to right, #004aaf, #0056cc)',
+                      boxShadow: '0 4px 14px 0 rgba(0, 74, 175, 0.25)'
+                    }}
                   >
                     <MapPin size={20} className="group-hover:animate-bounce" />
                     <span>{t('location.openInMaps')}</span>
@@ -78,14 +82,14 @@ const Location: React.FC = () => {
                   </button>
                 </div>
 
-                <div className="bg-slate-800/80 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-amber-500/50 transition-all duration-300 group">
+                <div className="bg-white/90 backdrop-blur-sm rounded-xl p-6 border border-gray-200 hover:border-blue-400 transition-all duration-300 group">
                   <div className="flex items-center space-x-2 mb-3">
-                    <Navigation className="text-amber-400 group-hover:scale-110 transition-transform" size={20} />
-                    <h3 className="text-lg font-semibold text-white">
+                    <Navigation style={{ color: '#004aaf' }} className="group-hover:scale-110 transition-transform" size={20} />
+                    <h3 className="text-lg font-semibold text-gray-900">
                       {t('location.projects')}
                     </h3>
                   </div>
-                  <p className="text-gray-300 text-sm leading-relaxed">
+                  <p className="text-gray-600 text-sm leading-relaxed">
                     {t('location.projectsText')}
                   </p>
                 </div>
